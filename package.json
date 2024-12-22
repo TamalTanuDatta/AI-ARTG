@@ -1,0 +1,15 @@
+{
+  "name": "ai-artg",
+  "version": "1.0.0",
+  "description": "This bot analyzes HTML code, captures screenshots, and automatically generates Playwright test cases.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.49.1"
+  }
+}
