@@ -1,0 +1,2599 @@
+<!DOCTYPE html>
+<html lang="de">
+        <head>
+    <script>
+    !function(){if("function"!=typeof window.__tcfapi||window.__tcfapi&&"function"!=typeof window.__tcfapi.start){var t,a=[],e=window,i=e.document,c=e.__tcfapi?e.__tcfapi.start:function(){};if(!e.__tcfapi&&function t(){var a=!!e.frames.__tcfapiLocator;if(!a){if(i.body){var c=i.createElement("iframe");c.style.cssText="display:none",c.name="__tcfapiLocator",i.body.appendChild(c)}else setTimeout(t,5)}return!a}()||e.__tcfapi&&!e.__tcfapi.start){var f=e.__tcfapi?e.__tcfapi():[];a.push.apply(a,f),e.__tcfapi=function(...e){var i=[...e];if(!e.length)return a;if("setGdprApplies"===i[0])i.length>3&&2===parseInt(i[1],10)&&"boolean"==typeof i[3]&&(t=i[3],"function"==typeof i[2]&&i[2]("set",!0));else if("ping"===i[0]){var c={gdprApplies:t,cmpLoaded:!1,apiVersion:"2.0"};"function"==typeof i[2]&&i[2](c,!0)}else a.push(i)},e.__tcfapi.commandQueue=a,e.__tcfapi.start=c,e.addEventListener("message",function(t){var a="string"==typeof t.data,i={};try{i=a?JSON.parse(t.data):t.data}catch(c){}var f=i.__tcfapiCall;f&&e.__tcfapi(f.command,f.version,function(e,i){if(t.source){var c={__tcfapiReturn:{returnValue:e,success:i,callId:f.callId,command:f.command}};a&&(c=JSON.stringify(c)),t.source.postMessage(c,"*")}},f.parameter)},!1)}}}();
+</script>
+
+<script type="module" async>(function(){"use strict";try{var e=document.createElement("style");e.appendChild(document.createTextNode('._consent-popup_18yki_1{position:fixed;display:grid;place-items:center;background-color:#00000059;isolation:isolate;z-index:9999999999;counter-reset:css-counter 0;top:0;left:0;right:0;bottom:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol;font-size:16px}._consent-popup-inner_18yki_21{background-color:#fff;padding:18px 18px 0;max-width:450px;text-align:justify;border-radius:4px;box-shadow:0 12px 24px #0000000d,0 8px 16px #0000000d,0 4px 8px #0000000d,0 0 2px #0000001f}._scrollable-container_18yki_33{max-height:70vh;overflow:auto;padding:0 8px}._headline_18yki_40{font-size:20px;line-height:1.4;font-weight:700;margin-bottom:22px;color:#000;text-align:center}._content_18yki_49{font-weight:400;color:#000;font-size:14px;line-height:1.3;margin-bottom:16px}._content_18yki_49 a{color:#1166a8;font-size:14px;text-decoration:none}._content_18yki_49 b{font-weight:700}._consent-decline_18yki_67{font-weight:500;color:#1166a8;cursor:pointer;text-decoration:none;border:none;background:transparent;padding:0}._consent-decline_18yki_67:hover{color:#0c4f90}._consent-decline_18yki_67:active{color:#083b78}._acceptance-buttons_18yki_85{display:flex;justify-content:space-between;background-color:fff;padding-bottom:18px;padding-top:8px}._acceptance-buttons_18yki_85>button{font-weight:700;font-size:16px;line-height:1.5;border-radius:4px;color:#333;padding:6px 0;width:49%}._consent-settings_18yki_103{background-color:inherit;cursor:pointer;text-align:center;border-width:2px;border-style:solid;border-color:#333}._consent-accept_18yki_114{background:#f5f200;cursor:pointer;border:none;text-align:center}._legalDisclosure_18yki_123{margin-top:8px;margin-bottom:8px}._legalDisclosure_18yki_123>a{font-size:14px;color:#000;font-weight:600}._headingForPurposes_18yki_133{display:block;font-size:.83em;margin-block-start:1.67em;margin-block-end:1.67em;margin-inline-start:0px;margin-inline-end:0px;font-weight:700}@media screen and (max-width: 767px){._consent-popup-inner_18yki_21{margin:20px}._headline_18yki_40{margin-bottom:28px}}@media screen and (max-height: 680px){._scrollable-container_18yki_33{max-height:60vh}}')),document.head.appendChild(e)}catch(o){console.error("vite-plugin-css-injected-by-js",o)}})();
+const e={...{headline:"Wir verwenden Cookies. Damit Sie finden, was Sie brauchen.",description:'Um Ihnen die bestmögliche Benutzererfahrung auf unseren Angeboten zu bieten, verwenden wir und Drittanbieter Cookies und andere Technologien (beides gemeinsam nennen wir nachfolgend: „Cookies"), um Geräteinformationen und personenbezogene Daten (z.B. IP Adressen) zu speichern und darauf zuzugreifen.<br><br>Dadurch ist es möglich, personalisierte Werbung entsprechend Ihren Interessen auszuspielen, unser Angebot zu optimieren und dessen Verwendung zu analysieren. Klicken Sie den Button unten rechts, um dem Einsatz von einwilligungspflichten Cookies und der damit verbundenen Verarbeitung personenbezogener Daten zuzustimmen oder den Button unten links, um eine detaillierte Auswahl hinsichtlich der Cookies zu treffen oder um der Verarbeitung personenbezogener Daten zu widersprechen, soweit diese auf Grundlage berechtigter Interessen erfolgt. Die Einwilligung umfasst auch die Übermittlung bestimmter personenbezogener Daten in Drittländer, u.a. die USA, nach Art. 49 (1) (a) DSGVO. Wollen Sie <b>keine Einwilligung</b> erteilen, klicken Sie bitte ${$2}.',adjustPreferences:"Sie können Ihre Präferenzen jederzeit anpassen und erteilte Einwilligungen widerrufen, indem Sie in unserer Datenschutzerklärung den Privacy Manager besuchen.",acceptButton:"Alle akzeptieren",privacySettings:"Mehr Details",here:"hier",privacy:"Datenschutzerklärung",imprint:"Impressum",vendorCount:"Wir arbeiten mit @@@@@@@ Partnern zusammen.",vendorList:"Anbieterliste",purposesHeading:"Zwecke"},imprintUrl:"https://www.leasingmarkt.de/impressum",privacyUrl:"https://www.leasingmarkt.de/datenschutz",vendorListUrl:"https://www.leasingmarkt.de/consent-management#vendors",...{purposes:{1:{name:"Speichern von oder Zugriff auf Informationen auf einem Endgerät",description:"Cookies, Endgeräte- oder ähnliche Online-Kennungen (z. B. login-basierte Kennungen, zufällig generierte Kennungen, netzwerkbasierte Kennungen) können zusammen mit anderen Informationen (z. B. Browsertyp und Browserinformationen, Sprache, Bildschirmgröße, unterstützte Technologien usw.) auf Ihrem Endgerät gespeichert oder von dort ausgelesen werden, um es jedes Mal wiederzuerkennen, wenn es eine App oder einer Webseite aufruft. Dies geschieht für einen oder mehrere der hier aufgeführten Verarbeitungszwecke."},25:{name:"Strikt erforderliche Cookies",description:"Diese Cookies sind für die einwandfreie Funktionalität der Webseite notwendig und speichern keine persönlich identifizierbaren Informationen. Sie werden normalerweise als Folge von Nutzeraktivitäten gesetzt, um wichtige Funktionen wie das Setzen und Aufrechterhalten von Anmeldedaten oder Datenschutzeinstellungen zu ermöglichen. Diese Cookies können normalerweise nicht abgeschaltet werden. Allerdings können bestimmte Browser diese Cookies blockieren oder Sie darauf hinweisen. Seien Sie sich bewusst, dass das Blockieren dieser Cookies die Funktionalität der Webseite beeinträchtigt"},26:{name:"Funktional",description:"Diese Cookies werden von der Website gesetzt um ein verbessertes Nutzungserlebnis durch erweiterte Funktionalitäten wie Personalisierung unseres Angebotes zu ermöglichen (etwa um Ihre Suchvorgänge fortzusetzen, die bei einem vorangegangenen Besuch unseres Angebotes vorgenommen wurden oder um Angebote aus Ihrer Nähe zu erhalten). Einige Cookies werden dafür verwendet, um von Ihnen bei Finanzierungsanfragen angegebene Informationen für 30 Tagen in Cookies zu speichern und innerhalb dieses Zeitraums automatisch für die Befüllung neuer Finanzierungsanfragen wiederzuverwenden. Ohne das Setzen solcher Cookies können solche erweiterten Funktionen ganz oder teilweise nicht genutzt werden."}},stacks:{1:"Genaue Standortdaten und Identifikation durch Scannen von Endgeräten",42:"Personalisierte Werbung und Inhalte, Messung von Werbeleistung und der Performance von Inhalten, Zielgruppenforschung sowie Entwicklung und Verbesserung von Angeboten"}}},n={},t=function(e,t,o){return t&&0!==t.length?Promise.all(t.map((e=>{if((e=function(e){return"/"+e}(e))in n)return;n[e]=!0;const t=e.endsWith(".css"),o=t?'[rel="stylesheet"]':"";if(document.querySelector(`link[href="${e}"]${o}`))return;const s=document.createElement("link");return s.rel=t?"stylesheet":"modulepreload",t||(s.as="script",s.crossOrigin=""),s.href=e,document.head.appendChild(s),t?new Promise(((n,t)=>{s.addEventListener("load",n),s.addEventListener("error",(()=>t(new Error(`Unable to preload CSS for ${e}`))))})):void 0}))).then((()=>e())):e()};const o=e=>{window.dataLayer=window.dataLayer||[];window.dataLayer.some((e=>"object"==typeof e&&"event"in e&&("data_ready"===e.event||"data_ready_non_essential"===e.event||"gtm.load"===e.event)))?e():setTimeout((()=>o(e)),100)};function s(e){o((()=>function(e){window.dataLayer=window.dataLayer||[],window.dataLayer.push({event:"event_trigger",event_category:"CMP",event_action:e,event_non_interaction:!0})}(e)))}const r=new Map([["A",0],["B",1],["C",2],["D",3],["E",4],["F",5],["G",6],["H",7],["I",8],["J",9],["K",10],["L",11],["M",12],["N",13],["O",14],["P",15],["Q",16],["R",17],["S",18],["T",19],["U",20],["V",21],["W",22],["X",23],["Y",24],["Z",25],["a",26],["b",27],["c",28],["d",29],["e",30],["f",31],["g",32],["h",33],["i",34],["j",35],["k",36],["l",37],["m",38],["n",39],["o",40],["p",41],["q",42],["r",43],["s",44],["t",45],["u",46],["v",47],["w",48],["x",49],["y",50],["z",51],["0",52],["1",53],["2",54],["3",55],["4",56],["5",57],["6",58],["7",59],["8",60],["9",61],["-",62],["_",63]]);function a(e){var n,t;return null!=(t=null==(n=document.cookie.match("(^|;)\\s*"+e+"\\s*=\\s*([^;]+)"))?void 0:n.pop())?t:void 0}function i(e,n){if(!n)return!1;return 100*function(e){var n;if(!/^[A-Za-z0-9\-_]+$/.test(e))return-1;let t="";for(const o of e)t+=null==(n=r.get(o))?void 0:n.toString(2).padStart(6,"0");return parseInt(t,2)}(n.substring(1,7))>Date.now()-864e5*e}const c=["autoscout24","autoplenum-development","autoplenum-staging","autoplenum","12gebrauchtwagen","12neuwagen","leasingmarkt","bild","leasevergelijker","autotrader","gebrauchtwagen","leasingtime"];function u(){return["path=/","max-age=31536000","domain="+g(document.location.hostname),"samesite=Lax"]}const d=["autoscout24","autoplenum","autoplenum-development","autoplenum-staging","autotrader","gebrauchtwagen","leasingmarkt","leasingtime","12gebrauchtwagen","12gebrauchtwagen-staging","12gebrauchtwagen-development","12neuwagen","12neuwagen-staging","12neuwagen-development","bild","leasevergelijker"],l={autoscout24:["de","be","at","es","it","fr","nl","lu","pl","hu","bg","ro","cz","ru","hr","se","com.tr","com.ua","com"],autoplenum:["de","at"],"autoplenum-development":["de","at"],"autoplenum-staging":["de","at"],autotrader:["nl"],gebrauchtwagen:["at"],leasingmarkt:["de","at"],leasingtime:["de"],"12gebrauchtwagen":["de"],"12gebrauchtwagen-development":["de"],"12gebrauchtwagen-staging":["de"],"12neuwagen":["de"],"12neuwagen-development":["de"],"12neuwagen-staging":["de"],bild:["de"],leasevergelijker:["nl"]},p=["https://deploy-preview-168--lm-bild.netlify.app","https://bild.de","https://leasingtime.de","https://rebuild.leasingtime.de","https://staging.leasingmarkt.de","https://staging.leasevergelijker.nl"];function m({origin:e,hostName:n,protocol:t,port:o}){const s=n.includes("autoscout24")&&n.includes("local"),r=!s&&t?`${t}//`:"https://",a=!s&&o?`:${o}`:"";if(p.includes(null!=e?e:""))return e;if(n.includes("autoscout24")&&"localhost"===n)return"https://www.autoscout24.com";if(e&&!e.includes("autoscout24")&&e.includes("local"))return e;let i="";for(const c of d)n.includes(`.${c}.`)&&(i=c);if(""===i)return"https://www.autoscout24.com";for(const c of l[i])if(n.endsWith(`.${c}`))return`${r}www.${i}.${c}${a}`;return"https://www.autoscout24.com"}const g=e=>{const n=m({hostName:e});return e&&n?n.replace("https://","").replace("www.","").replace("local.","").replace("localhost","www.autoscout24.com").replace(/:.*$/,""):"www.autoscout24.com"},h=window.location;function w(){function e(n){document.body?n():setTimeout((()=>e(n)),1)}return new Promise((n=>{e(n)}))}function f(e){const{hostname:n,pathname:t,protocol:o,port:s,origin:r}=h,a=m({origin:r,hostName:n,protocol:o,port:s});if(!a)return;if(e&&"bild"===e)return`${a}/leasing/consent-management`;if(!n.includes("autoscout24"))return`${a}/consent-management`;var i;return`${n.endsWith(".be")&&n.includes("autoscout24")?`${a}${i=t,i.startsWith("/nl")?"/nl":"/fr"}`:a}/consent-management`}function v({translations:e,vendorCount:n,companyName:t,styles:o}){w().then((()=>{const r=window.self!==window.top,i=h.href.includes("disable-cmp=true")||document.cookie.includes("disable-cmp=true"),c="true"===document.body.dataset.suppressCmp||"true"===document.body.dataset.suppresscmp,d=/autoscout24\.com\/entry\/.*/.test(h.href);if(c||i||r||d)return;const l=(new Document).querySelector.call(document,"#as24-cmp-popup");l&&l.remove(),function({translations:e,vendorCount:n,companyName:t,styles:o}){var r;const i=`\n<div class=${o["consent-popup"]} id="as24-cmp-popup">\n  <div class=${o["consent-popup-inner"]} data-testid="as24-cmp-container">\n  <div class=${o["scrollable-container"]}>\n      <p class=${o.headline}>${e.headline}</p>\n      <p class=${o.content}>${e.description}</p>\n      <p class=${o.content}>${e.purposes[1].description}</p>\n      <p class=${o.content}>${e.adjustPreferences}</p>\n      <h5 class=${o.headingForPurposes}>${e.purposesHeading}</h5>\n      <p class=${o.content}>${e.stacks[1]}</p>\n      <hr />\n      <p class=${o.content}>${e.stacks[42]}</p>\n      <hr />\n      <h5 class=${o.headingForPurposes}>${e.purposes[25].name}</h5>\n      <p class=${o.content}>${e.purposes[25].description}</p>\n      <hr />\n      <h5 class=${o.headingForPurposes}>${e.purposes[26].name}</h5>\n      <p class=${o.content}>${e.purposes[26].description}</p>\n      <hr />\n      <p class=${o.content}>${null==(r=e.vendorCount)?void 0:r.replace("@@@@@@@",n.toString())}</p>\n    </div>\n    <div class=${o.legalDisclosure}>\n      <a href=${e.privacyUrl} target="_blank">${e.privacy}</a> | \n      <a href=${e.imprintUrl} target="_blank">${e.imprint}</a> |\n      <a href=${e.vendorListUrl} target="_blank">${e.vendorList}</a>\n    </div>\n    <div class=${o["acceptance-buttons"]}>\n      <button class=${o["consent-settings"]} data-testid="as24-cmp-partial-consent-button">${e.privacySettings}</button>\n      <button class=${o["consent-accept"]} data-testid="as24-cmp-accept-all-button">${e.acceptButton}</button>\n    </div>\n  </div>\n</div>`,c=document.createElement("div");c.innerHTML=i,c.addEventListener("click",(async function(e){e.target instanceof HTMLElement&&(e.target.closest('[data-testId="as24-cmp-accept-all-button"]')&&l({route:"accept-all",cmpEvent:"acceptAllButtonClicked",companyName:t}),e.target.closest('[data-testId="as24-cmp-decline-all-button"]')&&l({route:"decline-all",cmpEvent:"denyAllButtonClicked",companyName:t}),e.target.closest('[data-testId="as24-cmp-partial-consent-button"]')&&l({route:"partial-consent",cmpEvent:"consentToolShouldBeShown",companyName:t}))})),document.body.appendChild(c);const d=f(t);async function l({route:e,cmpEvent:n,companyName:t}){if("partial-consent"===e){s(n);const e=encodeURIComponent(h.href),t=`${d}/?redirectTo=${e}`;h.href=t}else{c.remove(),s(n);const o=await fetch(`${d}/${e}`,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({companyName:t})}).then((e=>e.json())),r=a("euconsent-v2")||"";if(o["euconsent-v2"]!==r){const e=u();document.cookie=[`euconsent-v2=${o["euconsent-v2"]}`,...e].join(";"),document.cookie=[`cconsent-v2=${encodeURIComponent(o["cconsent-v2"])}`,...e].join(";"),document.cookie=[`addtl_consent=${o.addtl_consent}`,...e].join(";"),document.cookie=[`as24-cmp-signature=${o["as24-cmp-signature"]}`,...e].join(";")}window.__tcfapi("updateCmpApi",2,(()=>null),o,!1)}}}({translations:e,vendorCount:n,companyName:t,styles:o}),s("consentNoticeDisplayed");try{if("1"===sessionStorage.cmpPopupShownEventSent)return;const e=f(t);sessionStorage.cmpPopupShownEventSent="1",navigator.sendBeacon(`${e}/popup-shown`,JSON.stringify({companyName:t}))}catch(p){}})).catch((e=>console.error("Unknown error occurred",e)))}const b=window.location,k=new Set(["fr-FR","nl-NL","de-AT"]);async function y(e){const n=b.hostname,o=(n.includes("local.autoscout24.")||n.includes("127.0.0.1")||n.includes("localhost"))&&!!document.getElementById("as24-cmp-local-body");let s;s=t(o?()=>import("../../full-cmp.js"):()=>import("https://www.autoscout24.de/assets/as24-cmp/full-cmp.js"),[]);try{(await s).initializeFullCmpApi(e)}catch(r){console.error(r)}}function $(e,n,t,o){document.cookie=[`${e}=`+n,...t].join(";"),o.delete(e)}const _=191,S=178,z={"consent-popup":"_consent-popup_18yki_1","consent-popup-inner":"_consent-popup-inner_18yki_21","scrollable-container":"_scrollable-container_18yki_33",headline:"_headline_18yki_40",content:"_content_18yki_49","consent-decline":"_consent-decline_18yki_67","acceptance-buttons":"_acceptance-buttons_18yki_85","consent-settings":"_consent-settings_18yki_103","consent-accept":"_consent-accept_18yki_114",legalDisclosure:"_legalDisclosure_18yki_123",headingForPurposes:"_headingForPurposes_18yki_133"},C=223,E={autoscout24:new Set(["en-GB","de-AT","fr-FR","fr-BE","fr-LU","it-IT","es-ES","pl-PL","nl-NL","bg-BG","ro-RO","hu-HU","hr-HR","cs-CZ","sv-SE","nl-BE","ru-RU","tr-TR","uk-UA","de-DE"]),"12gebrauchtwagen":new Set(["de-DE"]),"12neuwagen":new Set(["de-DE"]),autoplenum:new Set(["de-DE","de-AT"]),autotrader:new Set(["nl-NL"]),bild:new Set(["de-DE"]),gebrauchtwagen:new Set(["de-AT"]),leasevergelijker:new Set(["nl-NL"]),leasingmarkt:new Set(["de-DE"]),leasingtime:new Set(["de-DE"])}.leasingmarkt.has("de-DE"),L={strict:E?C:_,nonStrict:E?C:S};var D;D={translations:(({translations:e,styles:n})=>{const t=`<button class=${n["consent-decline"]} data-testid="as24-cmp-decline-all-button">${e.here}</button>`;return e.description.includes("${$1}")&&!(null==e?void 0:e.consentUrl)&&console.error("Template requires companyUrls.consentUrl."),{...e,description:(o=e.description,s={$1:null==e?void 0:e.consentUrl,$2:t},new Function("vars",["const tagged = ( "+Object.keys(s).join(", ")+" ) =>","`"+o+"`","return tagged(...Object.values(vars))"].join("\n"))(s))};var o,s})({translations:e,styles:z}),isoCulture:"de-DE",companyName:"leasingmarkt",styles:z,mode:"strict",vendorListVersion:84,vendorListCount:L},"undefined"!=typeof window&&function(e){var n,t;const o=new URL(e),s=null==(n=o.searchParams.get("show-as24-cmp"))?void 0:n.toLowerCase(),r=null==(t=a("show-as24-cmp"))?void 0:t.toLowerCase(),i=c.findIndex((e=>o.hostname.includes(`${e}`)))>-1;return"true"===s||"false"!==s&&("true"===r||"false"!==r&&i)}(b.href)&&async function({translations:e,...n}){window.__as24CmpEnabled=!0;const{isoCulture:t,companyName:o,styles:s}=n,r=((e,n)=>k.has(e)?n.strict:n.nonStrict)(t,n.vendorListCount);window.addEventListener("showAs24Cmp",(()=>v({translations:e,vendorCount:r,companyName:o,styles:s}))),function(e){var n;if(null!=(n=e.includes("sticky-as24-cmp=true"))&&n){const e=u();document.cookie=["show-as24-cmp=true",...e].join(";")}}(b.search),function(){const e=new URLSearchParams(b.search),n=new URLSearchParams(b.hash.slice(1)),t=e.get("euconsent-v2")||n.get("euconsent-v2"),o=e.get("cconsent-v2")||n.get("cconsent-v2"),s=e.get("addtl_consent")||n.get("addtl_consent"),r=e.get("cm-custom-vendors")||n.get("cm-custom-vendors"),a=e.get("cm-custom-purposes")||n.get("cm-custom-purposes"),i=u();e.delete("gdpr-auditId"),e.delete("gdpr-last-interaction"),t&&$("euconsent-v2",t,i,e),o&&$("cconsent-v2",o,i,e),s&&$("addtl_consent",s,i,e),a&&$("cm-custom-purposes",a,i,e),r&&$("cm-custom-vendors",r,i,e);const c=e.toString();history.replaceState(null,"",c?`?${c}`:"")}();const c=365,d=a("euconsent-v2")||"";i(c,d)?window.location.search.includes("googleConsentMode=true")&&(window.dataLayer=window.dataLayer||[],window.dataLayer.push("consent","default",{ad_storage:"granted",analytics_storage:"granted",functionality_storage:"granted",personalization_storage:"granted",security_storage:"granted"},{common_country:"de",common_language:"de",common_brand:"",common_environment:"live",common_platform:"web",common_techState:"tatsu"})):v({translations:e,vendorCount:r,companyName:o,styles:s}),"loading"===document.readyState?window.addEventListener("DOMContentLoaded",(()=>y(n))):y(n)}(D);
+</script>
+
+    <meta name="lmv" content="3">
+    <link rel="preload" href="/res/v3/css/app.css?id=21596fe2689288b4df6dc9f23fff7757" as="style">
+    <link rel="preload" href="/res/v3/js/app.js?id=181a84ac8a08ae696f013878ffe0c2a6" as="script">
+    <link rel="preload" href="/res/v3/js/banner.js?id=4276ae13ab266b645cc07331f8f39f8e" as="script">
+    <link rel="preload" href="https://www.leasingmarkt.de/res/fonts/source-sans-pro-v11-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://www.leasingmarkt.de/res/fonts/source-sans-pro-v11-latin-600.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/res/v3/js/input/password-input.js?id=6c2c0edbf3f380be62e31b16a9302229" as="script">
+ 
+     
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+            <meta name="apple-itunes-app" content="app-id=1261336827"><!-- 8680831efd1081b7276b1ea7d5eb186b -->
+        <link rel="apple-touch-icon" sizes="180x180" href="https://www.leasingmarkt.de/as24-leasingmarkt-favicon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://www.leasingmarkt.de/as24-leasingmarkt-favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://www.leasingmarkt.de/as24-leasingmarkt-favicon-16x16.png">
+    <link rel="mask-icon" href="https://www.leasingmarkt.de/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+            <title>Registrierung - LeasingMarkt.de</title>
+    
+    
+    
+    
+    <link rel="stylesheet" type="text/css" href="/res/v3/css/app.css?id=21596fe2689288b4df6dc9f23fff7757">
+
+    <!-- SEO HEADER -->
+    <meta name="robots" content="NOINDEX,FOLLOW">
+    <!-- /SEO HEADER -->
+
+    
+    <meta name="author" content="LeasingMarkt.de GmbH">
+    <meta name="generator" content="LeasingMarkt.de GmbH">
+            <meta name="p:domain_verify" content="f17e598242455c3048d185827353ddb6"/>
+    
+    
+    
+    <meta name="csrf-token" content="GISESzd0JIZIwpxFjLnAOj0smDkGHANWk7f9A4v8">
+
+    
+            <style >[wire\:loading], [wire\:loading\.delay], [wire\:loading\.inline-block], [wire\:loading\.inline], [wire\:loading\.block], [wire\:loading\.flex], [wire\:loading\.table], [wire\:loading\.grid], [wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short], [wire\:loading\.delay\.long], [wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest] {display:none;}[wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}input:-webkit-autofill, select:-webkit-autofill, textarea:-webkit-autofill {animation-duration: 50000s;animation-name: livewireautofill;}@keyframes livewireautofill { from {} }</style>
+    
+    <script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"WebSite","name":"LeasingMarkt.de","url":"https:\/\/www.leasingmarkt.de"}</script>
+</head>
+
+    <body data-select-ad="bar" data-domain="www.leasingmarkt.de" data-url-route="register"
+                    class="antialiased transform-gpu bg-white as24rebrand ">
+        <div>
+            <main id="wrapper" class="clearfix">
+                
+                    <div class="mobile:px-0 px-2 tablet:px-0 sticky left-0 z-20 " style="border-bottom: 1px solid #EDEDED">
+    <header id="header" class="header-default desktop:container flex h-11 items-center mobile:h-8 mx-auto relative">
+
+                    <svg data-menu-toggle="main-menu" data-menu-toggle-status-target="use" data-menu-toggle-status-attribute="xlink:href" data-menu-toggle-status-open="/res/v3/images/icons.svg?id=a29288d93520919961929917bb11808c#cross" class="cursor-pointer desktop:hidden flex-none laptop:hidden ml-3 mobile:flex-none mr-2 text-black-120" viewbox="0 0 24 24" width="24px" height="24px" fill="">
+    <use xlink:href="/res/v3/images/icons.svg?id=a29288d93520919961929917bb11808c#menu"></use>
+</svg>
+<div data-menu-content="main-menu" class="mobile-menu absolute bg-white desktop:hidden hidden laptop:hidden left-0 mt-11 mobile:mt-8 top-0 w-full">
+    <ul class="desktop:hidden laptop:hidden">
+        <li
+    class="border-b border-black-20 pl-3 py-2 text-black-100
+    data-menu-item "
+>
+            <a
+        class="block pl-3 text-black-100 hover:text-turquoise-100"
+        
+        href="https://www.leasingmarkt.de/listing"
+                target="_self"
+    ><strong>
+            Suchen 
+        </strong></a>
+    </li>
+                <li
+    class="border-b border-black-20 pl-3 py-2 text-black-100  lagoon-brush percentage
+    data-menu-item "
+>
+            <a
+        class="block pl-3 text-black-100 hover:text-turquoise-100"
+        
+        href="https://www.leasingmarkt.de/deals"
+                target="_self"
+    ><strong>
+            Deals 
+        </strong></a>
+    </li>
+                                    <li
+    class="border-b border-black-20 pl-3 py-2 text-black-100 has-flyout relative
+    data-menu-item  data-has-flyout "
+>
+            <div class="w-full" data-collapsible>
+        <div class="cursor-pointer flex items-center select-none" data-collapsible-toggle>
+            <svg data-collapsible-state-indicator="data-collapsible-state-indicator" class="block duration-300 transform transition-all" viewbox="0 0 16 16" width="16px" height="16px" fill="">
+    <use xlink:href="/res/v3/images/icons.svg?id=a29288d93520919961929917bb11808c#arrow-right"></use>
+</svg>
+            <strong class="block ">Kategorien</strong>
+        </div>
+        <div class="duration-300 hidden h-0  overflow-y-hidden transition-all" data-collapsible-container>
+            <div data-collapsible-content>
+                <div class="flex make-flyout pr-4 pt-3">
+                                            <div class="w-1/2 make-column">
+                            <ul class="">
+                                                                                                            <li class="border-b border-black-20">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 px-2 py-2 rounded text-1-2 text-black-100 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/e-auto"
+                target="_self"
+    >E-Autos</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 px-2 py-2 rounded text-1-2 text-black-100 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/hybrid-leasing"
+                target="_self"
+    >Hybridautos</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 px-2 py-2 rounded text-1-2 text-black-100 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/neuwagen-leasing"
+                target="_self"
+    >Neuwagen</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 px-2 py-2 rounded text-1-2 text-black-100 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/gebrauchtwagen"
+                target="_self"
+    >Gebrauchtwagen</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 px-2 py-2 rounded text-1-2 text-black-100 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/leasing-ohne-anzahlung"
+                target="_self"
+    >Leasing ohne Anzahlung</a>
+                                        </li>
+                                                                                                </ul>
+                        </div>
+                                                                <div class="w-1/2 make-column">
+                            <ul class="">
+                                                                                                            <li class="border-b border-black-20">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 px-2 py-2 rounded text-1-2 text-black-100 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/lagerfahrzeuge"
+                target="_self"
+    >Sofort verfügbar</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 px-2 py-2 rounded text-1-2 text-black-100 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/leasing-unter-100-euro"
+                target="_self"
+    >Leasing unter 100€</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 px-2 py-2 rounded text-1-2 text-black-100 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/privatleasing"
+                target="_self"
+    >Privatleasing</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 px-2 py-2 rounded text-1-2 text-black-100 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/firmenwagen-leasing"
+                target="_self"
+    >Gewerbe</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 px-2 py-2 rounded text-1-2 text-black-100 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/kurzzeitleasing"
+                target="_self"
+    >Kurzzeitleasing</a>
+                                        </li>
+                                                                                                </ul>
+                        </div>
+                                    </div>
+                                    <div class="px-2 pt-2">
+                        <a
+        class="mb-2 block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 hover:text-turquoise-100 px-2 py-2 rounded text-1-2 text-black-100 text-center"
+        
+        href="https://www.leasingmarkt.de/leasing-vergleiche"
+                target="_self"
+    >Alle Kategorien</a>
+                    </div>
+            </div>
+        </div>
+    </div>
+    </li>
+                <li
+    class="border-b border-black-20 pl-3 py-2 text-black-100
+    data-menu-item "
+>
+            <a
+        class="block pl-3 text-black-100 hover:text-turquoise-100"
+        
+        href="https://www.leasingmarkt.de/auto-abo"
+                target="_self"
+    ><strong>
+            Auto‑Abo 
+        </strong></a>
+    </li>
+                <li
+    class="border-b border-black-20 pl-3 py-2 text-black-100 has-flyout relative
+    data-menu-item  data-has-flyout "
+>
+            <div class="w-full" data-collapsible>
+        <div class="cursor-pointer flex items-center select-none" data-collapsible-toggle>
+            <svg data-collapsible-state-indicator="data-collapsible-state-indicator" class="block duration-300 transform transition-all" viewbox="0 0 16 16" width="16px" height="16px" fill="">
+    <use xlink:href="/res/v3/images/icons.svg?id=a29288d93520919961929917bb11808c#arrow-right"></use>
+</svg>
+            <strong class="block ">Marken</strong>
+        </div>
+        <div class="duration-300 hidden h-0  overflow-y-hidden transition-all" data-collapsible-container>
+            <div data-collapsible-content>
+                <div class="flex make-flyout pr-4 pt-3">
+                                            <div class="w-1/2 make-column">
+                            <ul class="">
+                                                                                                            <li class="border-b border-black-20">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 px-2 py-2 rounded text-1-2 text-black-100 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/leasing-audi"
+                target="_self"
+    >Audi</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 px-2 py-2 rounded text-1-2 text-black-100 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/leasing-citroen"
+                target="_self"
+    >Citroën</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 px-2 py-2 rounded text-1-2 text-black-100 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/leasing-dacia"
+                target="_self"
+    >Dacia</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 px-2 py-2 rounded text-1-2 text-black-100 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/leasing-ford"
+                target="_self"
+    >Ford</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 px-2 py-2 rounded text-1-2 text-black-100 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/leasing-jeep"
+                target="_self"
+    >Jeep</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 px-2 py-2 rounded text-1-2 text-black-100 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/leasing-mazda"
+                target="_self"
+    >Mazda</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 px-2 py-2 rounded text-1-2 text-black-100 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/leasing-mg"
+                target="_self"
+    >MG</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 px-2 py-2 rounded text-1-2 text-black-100 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/leasing-opel"
+                target="_self"
+    >Opel</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 px-2 py-2 rounded text-1-2 text-black-100 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/leasing-porsche"
+                target="_self"
+    >Porsche</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 px-2 py-2 rounded text-1-2 text-black-100 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/leasing-seat"
+                target="_self"
+    >Seat</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 px-2 py-2 rounded text-1-2 text-black-100 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/leasing-suzuki"
+                target="_self"
+    >Suzuki</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 px-2 py-2 rounded text-1-2 text-black-100 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/leasing-volvo"
+                target="_self"
+    >Volvo</a>
+                                        </li>
+                                                                                                </ul>
+                        </div>
+                                                                <div class="w-1/2 make-column">
+                            <ul class="">
+                                                                                                            <li class="border-b border-black-20">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 px-2 py-2 rounded text-1-2 text-black-100 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/leasing-bmw"
+                target="_self"
+    >BMW</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 px-2 py-2 rounded text-1-2 text-black-100 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/leasing-cupra"
+                target="_self"
+    >Cupra</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 px-2 py-2 rounded text-1-2 text-black-100 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/leasing-fiat"
+                target="_self"
+    >Fiat</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 px-2 py-2 rounded text-1-2 text-black-100 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/leasing-hyundai"
+                target="_self"
+    >Hyundai</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 px-2 py-2 rounded text-1-2 text-black-100 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/leasing-kia"
+                target="_self"
+    >Kia</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 px-2 py-2 rounded text-1-2 text-black-100 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/leasing-mercedes_benz"
+                target="_self"
+    >Mercedes-Benz</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 px-2 py-2 rounded text-1-2 text-black-100 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/leasing-mitsubishi"
+                target="_self"
+    >Mitsubishi</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 px-2 py-2 rounded text-1-2 text-black-100 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/leasing-peugeot"
+                target="_self"
+    >Peugeot</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 px-2 py-2 rounded text-1-2 text-black-100 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/leasing-renault"
+                target="_self"
+    >Renault</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 px-2 py-2 rounded text-1-2 text-black-100 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/leasing-skoda"
+                target="_self"
+    >Skoda</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 px-2 py-2 rounded text-1-2 text-black-100 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/leasing-toyota"
+                target="_self"
+    >Toyota</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 px-2 py-2 rounded text-1-2 text-black-100 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/leasing-vw"
+                target="_self"
+    >VW</a>
+                                        </li>
+                                                                                                </ul>
+                        </div>
+                                    </div>
+                                    <div class="px-2 pt-2">
+                        <a
+        class="mb-2 block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 hover:text-turquoise-100 px-2 py-2 rounded text-1-2 text-black-100 text-center"
+        
+        href="https://www.leasingmarkt.de/hersteller"
+                target="_self"
+    >Alle Marken</a>
+                    </div>
+            </div>
+        </div>
+    </div>
+    </li>
+                <li
+    class="border-b border-black-20 pl-3 py-2 text-black-100 has-flyout relative
+    data-menu-item  data-has-flyout "
+>
+            <div class="w-full" data-collapsible>
+        <div class="cursor-pointer flex items-center select-none" data-collapsible-toggle>
+            <svg data-collapsible-state-indicator="data-collapsible-state-indicator" class="block duration-300 transform transition-all" viewbox="0 0 16 16" width="16px" height="16px" fill="">
+    <use xlink:href="/res/v3/images/icons.svg?id=a29288d93520919961929917bb11808c#arrow-right"></use>
+</svg>
+            <strong class="block ">Wissen</strong>
+        </div>
+        <div class="duration-300 hidden h-0  overflow-y-hidden transition-all" data-collapsible-container>
+            <div data-collapsible-content>
+                <div class="flex make-flyout pr-4 pt-3">
+                                            <div class="make-column w-full">
+                            <ul class="">
+                                                                                                            <li class="border-b border-black-20">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 px-2 py-2 rounded text-1-2 text-black-100 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/ratgeber"
+                target="_self"
+    >Ratgeber</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 px-2 py-2 rounded text-1-2 text-black-100 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/magazin"
+                target="_self"
+    >Magazin</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 px-2 py-2 rounded text-1-2 text-black-100 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/ratgeber/faq"
+                target="_self"
+    >FAQ</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 px-2 py-2 rounded text-1-2 text-black-100 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/ratgeber/leasing-lexikon"
+                target="_self"
+    >Lexikon</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 px-2 py-2 rounded text-1-2 text-black-100 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/auto-tests"
+                target="_self"
+    >Auto-Tests</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 px-2 py-2 rounded text-1-2 text-black-100 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/e-book"
+                target="_self"
+    >Gratis E-Book</a>
+                                        </li>
+                                                                                                </ul>
+                        </div>
+                                                        </div>
+            </div>
+        </div>
+    </div>
+    </li>
+                <li
+    class="border-b border-black-20 pl-3 py-2 text-black-100 has-flyout relative
+    data-menu-item  data-has-flyout "
+>
+            <div class="w-full" data-collapsible>
+        <div class="cursor-pointer flex items-center select-none" data-collapsible-toggle>
+            <svg data-collapsible-state-indicator="data-collapsible-state-indicator" class="block duration-300 transform transition-all" viewbox="0 0 16 16" width="16px" height="16px" fill="">
+    <use xlink:href="/res/v3/images/icons.svg?id=a29288d93520919961929917bb11808c#arrow-right"></use>
+</svg>
+            <strong class="block ">Leasingübernahmen</strong>
+        </div>
+        <div class="duration-300 hidden h-0  overflow-y-hidden transition-all" data-collapsible-container>
+            <div data-collapsible-content>
+                <div class="flex make-flyout pr-4 pt-3">
+                                            <div class="w-1/2 make-column">
+                            <ul class="">
+                                                                                                            <li class="border-b border-black-20">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 px-2 py-2 rounded text-1-2 text-black-100 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/kosten"
+                target="_self"
+    >Leasingfahrzeug inserieren</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 px-2 py-2 rounded text-1-2 text-black-100 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/leasinguebernahme"
+                target="_self"
+    >Leasingübernahmen suchen</a>
+                                        </li>
+                                                                                                </ul>
+                        </div>
+                                                        </div>
+            </div>
+        </div>
+    </div>
+    </li>
+    </ul>
+</div>
+        
+        <div id="logo" class="logo mobile:flex-1 tablet:flex-1 tablet:center">
+    <a
+        class="block mx-auto w-fit-content"
+        
+        href="https://www.leasingmarkt.de"
+                target="_self"
+    ><img
+    src="https://www.leasingmarkt.de/res/v3/image/home/as24-leasingmarkt-endorsement.svg" alt="LeasingMarkt.de" class="mx-auto &#039;h-6&#039;" title="LeasingMarkt.de" width="200" height="28" loading="lazy"
+></a>
+</div>
+
+                    <div class="ml-auto mr-auto laptop:hidden desktop:hidden fixClass menu-item">
+    <a
+        class="flex items-center" title="favoriten"
+        
+        href="https://www.leasingmarkt.de/parkplatz"
+                target="_self"
+    ><div class="relative">
+            <div class="ml-2 text-white" data-favlist-count="data-favlist-count">
+    <svg  viewbox="0 0 16 16" width="16px" height="16px" fill="">
+    <use xlink:href="/res/v3/images/icons.svg?id=a29288d93520919961929917bb11808c#heart-outlined"></use>
+</svg>
+    <span class="badge bg-theme-primary indent-0 inline-block ml-1 text-1 text-white absolute mobile:text-0 tablet:text-0 laptop:text-0 bottom-0 right-0 transform translate-x-1 translate-y-1 desktop:translate-x-2 desktop:translate-y-2" data-badge="data-badge">0</span>
+</div>
+        </div></a>
+</div>
+
+            <nav id="primary-menu" class="desktop:ml-10 flex-1 inline-block laptop:ml-4 ml-3 mobile:flex-none tablet:flex-none">
+    <ul data-menu class="desktop:flex flex-1 hidden items-center laptop:flex menu-scroll">
+       <li
+    class="h-11 flex items-center menu-item mr-4"
+    class=" "
+    data-menu-item      data-ab-test-metric-click="navigation_click_on_suchen" >
+            <a
+        class="flex desktop:flex-none items-center" title=""
+        
+        href="https://www.leasingmarkt.de/listing"
+                target="_self"
+    >Suchen</a>
+    </li>
+                <li
+    class="h-11 flex items-center menu-item mr-4 lagoon-brush percentage"
+    class=" "
+    data-menu-item      data-ab-test-metric-click="navigation_click_on_deals" >
+            <a
+        class="flex desktop:flex-none items-center" title=""
+        
+        href="https://www.leasingmarkt.de/deals"
+                target="_self"
+    >Deals</a>
+    </li>
+                                    <li
+    class="has-flyout relative  h-11 flex items-center menu-item mr-4"
+    class="  has-flyout relative "
+    data-menu-item  data-has-flyout     >
+            <div class="dropdown-control cursor-pointer flex desktop:flex-none items-center" title="">
+            Kategorien 
+            <svg viewBox="0 0 24 24" class="inline-block w-3 h-3 text-black-200"><use xlink:href="/res/v3/images/icons.svg?id=a29288d93520919961929917bb11808c#arrow-down"></use></svg>
+            
+        </div>
+                <div class="dropdown-menu absolute bg-white border-t-2 duration-200 flyout-content mobile:mt-8 mt-11 rounded-b-xl overflow-hidden shadow top-0 z-10 left-0">
+            <div class="make-flyout flex p-2">
+                                            <div class="w-1/2 make-column">
+                            <ul class=" w-fit-content">
+                                                                                                            <li class="border-b border-black-20 w-max">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 w-max px-2 py-2 rounded text-1-2 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/e-auto"
+                target="_self"
+    >E-Autos</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20 w-max">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 w-max px-2 py-2 rounded text-1-2 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/hybrid-leasing"
+                target="_self"
+    >Hybridautos</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20 w-max">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 w-max px-2 py-2 rounded text-1-2 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/neuwagen-leasing"
+                target="_self"
+    >Neuwagen</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20 w-max">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 w-max px-2 py-2 rounded text-1-2 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/gebrauchtwagen"
+                target="_self"
+    >Gebrauchtwagen</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20 w-max">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 w-max px-2 py-2 rounded text-1-2 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/leasing-ohne-anzahlung"
+                target="_self"
+    >Leasing ohne Anzahlung</a>
+                                        </li>
+                                                                                                </ul>
+                        </div>
+                                                                <div class="w-1/2 make-column">
+                            <ul class=" w-fit-content">
+                                                                                                            <li class="border-b border-black-20 max-w-max">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 w-max px-2 py-2 rounded text-1-2 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/lagerfahrzeuge"
+                target="_self"
+    >Sofort verfügbar</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20 max-w-max">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 w-max px-2 py-2 rounded text-1-2 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/leasing-unter-100-euro"
+                target="_self"
+    >Leasing unter 100€</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20 max-w-max">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 w-max px-2 py-2 rounded text-1-2 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/privatleasing"
+                target="_self"
+    >Privatleasing</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20 max-w-max">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 w-max px-2 py-2 rounded text-1-2 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/firmenwagen-leasing"
+                target="_self"
+    >Gewerbe</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20 max-w-max">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 w-max px-2 py-2 rounded text-1-2 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/kurzzeitleasing"
+                target="_self"
+    >Kurzzeitleasing</a>
+                                        </li>
+                                                                                                </ul>
+                        </div>
+                                    </div>
+
+                                    <div class="px-2">
+                        <a
+        class="mb-2 block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 hover:text-turquoise-100 px-2 py-2 rounded text-1-2 text-black-100 text-center"
+        
+        href="https://www.leasingmarkt.de/leasing-vergleiche"
+                target="_self"
+    >Alle Kategorien</a>
+                    </div>
+        </div>
+    </li>
+                <li
+    class="h-11 flex items-center menu-item mr-4"
+    class=" "
+    data-menu-item     >
+            <a
+        class="flex desktop:flex-none items-center" title=""
+        
+        href="https://www.leasingmarkt.de/auto-abo"
+                target="_self"
+    >Auto‑Abo</a>
+    </li>
+                <li
+    class="has-flyout relative  h-11 flex items-center menu-item mr-4"
+    class="  has-flyout relative "
+    data-menu-item  data-has-flyout     >
+            <div class="dropdown-control cursor-pointer flex desktop:flex-none items-center" title="">
+            Marken 
+            <svg viewBox="0 0 24 24" class="inline-block w-3 h-3 text-black-200"><use xlink:href="/res/v3/images/icons.svg?id=a29288d93520919961929917bb11808c#arrow-down"></use></svg>
+            
+        </div>
+                <div class="dropdown-menu absolute bg-white border-t-2 duration-200 flyout-content mobile:mt-8 mt-11 rounded-b-xl overflow-hidden shadow top-0 z-10 left-0">
+            <div class="make-flyout flex p-2">
+                                            <div class="w-1/2 make-column">
+                            <ul class=" w-fit-content">
+                                                                                                            <li class="border-b border-black-20 w-max">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 w-max px-2 py-2 rounded text-1-2 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/leasing-audi"
+                target="_self"
+    >Audi</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20 w-max">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 w-max px-2 py-2 rounded text-1-2 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/leasing-citroen"
+                target="_self"
+    >Citroën</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20 w-max">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 w-max px-2 py-2 rounded text-1-2 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/leasing-dacia"
+                target="_self"
+    >Dacia</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20 w-max">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 w-max px-2 py-2 rounded text-1-2 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/leasing-ford"
+                target="_self"
+    >Ford</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20 w-max">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 w-max px-2 py-2 rounded text-1-2 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/leasing-jeep"
+                target="_self"
+    >Jeep</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20 w-max">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 w-max px-2 py-2 rounded text-1-2 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/leasing-mazda"
+                target="_self"
+    >Mazda</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20 w-max">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 w-max px-2 py-2 rounded text-1-2 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/leasing-mg"
+                target="_self"
+    >MG</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20 w-max">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 w-max px-2 py-2 rounded text-1-2 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/leasing-opel"
+                target="_self"
+    >Opel</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20 w-max">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 w-max px-2 py-2 rounded text-1-2 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/leasing-porsche"
+                target="_self"
+    >Porsche</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20 w-max">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 w-max px-2 py-2 rounded text-1-2 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/leasing-seat"
+                target="_self"
+    >Seat</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20 w-max">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 w-max px-2 py-2 rounded text-1-2 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/leasing-suzuki"
+                target="_self"
+    >Suzuki</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20 w-max">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 w-max px-2 py-2 rounded text-1-2 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/leasing-volvo"
+                target="_self"
+    >Volvo</a>
+                                        </li>
+                                                                                                </ul>
+                        </div>
+                                                                <div class="w-1/2 make-column">
+                            <ul class=" w-fit-content">
+                                                                                                            <li class="border-b border-black-20 max-w-max">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 w-max px-2 py-2 rounded text-1-2 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/leasing-bmw"
+                target="_self"
+    >BMW</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20 max-w-max">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 w-max px-2 py-2 rounded text-1-2 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/leasing-cupra"
+                target="_self"
+    >Cupra</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20 max-w-max">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 w-max px-2 py-2 rounded text-1-2 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/leasing-fiat"
+                target="_self"
+    >Fiat</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20 max-w-max">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 w-max px-2 py-2 rounded text-1-2 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/leasing-hyundai"
+                target="_self"
+    >Hyundai</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20 max-w-max">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 w-max px-2 py-2 rounded text-1-2 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/leasing-kia"
+                target="_self"
+    >Kia</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20 max-w-max">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 w-max px-2 py-2 rounded text-1-2 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/leasing-mercedes_benz"
+                target="_self"
+    >Mercedes-Benz</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20 max-w-max">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 w-max px-2 py-2 rounded text-1-2 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/leasing-mitsubishi"
+                target="_self"
+    >Mitsubishi</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20 max-w-max">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 w-max px-2 py-2 rounded text-1-2 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/leasing-peugeot"
+                target="_self"
+    >Peugeot</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20 max-w-max">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 w-max px-2 py-2 rounded text-1-2 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/leasing-renault"
+                target="_self"
+    >Renault</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20 max-w-max">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 w-max px-2 py-2 rounded text-1-2 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/leasing-skoda"
+                target="_self"
+    >Skoda</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20 max-w-max">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 w-max px-2 py-2 rounded text-1-2 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/leasing-toyota"
+                target="_self"
+    >Toyota</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20 max-w-max">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 w-max px-2 py-2 rounded text-1-2 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/leasing-vw"
+                target="_self"
+    >VW</a>
+                                        </li>
+                                                                                                </ul>
+                        </div>
+                                    </div>
+
+                                    <div class="px-2">
+                        <a
+        class="mb-2 block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 hover:text-turquoise-100 px-2 py-2 rounded text-1-2 text-black-100 text-center"
+        
+        href="https://www.leasingmarkt.de/hersteller"
+                target="_self"
+    >Alle Marken</a>
+                    </div>
+        </div>
+    </li>
+                <li
+    class="has-flyout relative  h-11 flex items-center menu-item mr-4"
+    class="  has-flyout relative "
+    data-menu-item  data-has-flyout     >
+            <div class="dropdown-control cursor-pointer flex desktop:flex-none items-center" title="">
+            Wissen 
+            <svg viewBox="0 0 24 24" class="inline-block w-3 h-3 text-black-200"><use xlink:href="/res/v3/images/icons.svg?id=a29288d93520919961929917bb11808c#arrow-down"></use></svg>
+            
+        </div>
+                <div class="dropdown-menu absolute bg-white border-t-2 duration-200 flyout-content mobile:mt-8 mt-11 rounded-b-xl overflow-hidden shadow top-0 z-10 left-0">
+            <div class="make-flyout flex p-2">
+                                            <div class="make-column w-full">
+                            <ul class=" w-fit-content">
+                                                                                                            <li class="border-b border-black-20 w-max">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 w-max px-2 py-2 rounded text-1-2 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/ratgeber"
+                target="_self"
+    >Ratgeber</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20 w-max">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 w-max px-2 py-2 rounded text-1-2 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/magazin"
+                target="_blank"
+    >Magazin</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20 w-max">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 w-max px-2 py-2 rounded text-1-2 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/ratgeber/faq"
+                target="_self"
+    >FAQ</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20 w-max">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 w-max px-2 py-2 rounded text-1-2 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/ratgeber/leasing-lexikon"
+                target="_self"
+    >Lexikon</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20 w-max">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 w-max px-2 py-2 rounded text-1-2 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/auto-tests"
+                target="_self"
+    >Auto-Tests</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20 w-max">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 w-max px-2 py-2 rounded text-1-2 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/e-book"
+                target="_self"
+    >Gratis E-Book</a>
+                                        </li>
+                                                                                                </ul>
+                        </div>
+                                                        </div>
+        </div>
+    </li>
+                <li
+    class="has-flyout relative  h-11 flex items-center menu-item mr-4"
+    class="  has-flyout relative "
+    data-menu-item  data-has-flyout     >
+            <div class="dropdown-control cursor-pointer flex desktop:flex-none items-center" title="Günstige Leasing Angebote">
+            Leasingübernahmen 
+            <svg viewBox="0 0 24 24" class="inline-block w-3 h-3 text-black-200"><use xlink:href="/res/v3/images/icons.svg?id=a29288d93520919961929917bb11808c#arrow-down"></use></svg>
+            
+        </div>
+                <div class="dropdown-menu absolute bg-white border-t-2 duration-200 flyout-content mobile:mt-8 mt-11 rounded-b-xl overflow-hidden shadow top-0 z-10 left-0">
+            <div class="make-flyout flex p-2">
+                                            <div class="w-1/2 make-column">
+                            <ul class=" w-fit-content">
+                                                                                                            <li class="border-b border-black-20 w-max">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 w-max px-2 py-2 rounded text-1-2 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/kosten"
+                target="_self"
+    >Leasingfahrzeug inserieren</a>
+                                        </li>
+                                                                                                                                                <li class="border-b border-black-20 w-max">
+                                            <a
+        class="block hover:bg-theme-navigationHover hover:ml-3 duration-300 hover:pl-3 w-max px-2 py-2 rounded text-1-2 indent-0 hover:indent-2 transition-all"
+        
+        href="https://www.leasingmarkt.de/leasinguebernahme"
+                target="_self"
+    >Leasingübernahmen suchen</a>
+                                        </li>
+                                                                                                </ul>
+                        </div>
+                                                        </div>
+        </div>
+    </li>
+                    <li class="h-11 flex items-center nav-item ml-auto mr-4 laptop:hidden desktop:flex right-0" url="https://www.leasingmarkt.de/parkplatz">
+    <button class="flex items-center" data-href="https://www.leasingmarkt.de/parkplatz" target="_self">
+        Favoriten
+    <div class="relative">
+        <div class="ml-2" data-favlist-count="data-favlist-count">
+    <svg  viewbox="0 0 16 16" width="16px" height="16px" fill="">
+    <use xlink:href="/res/v3/images/icons.svg?id=a29288d93520919961929917bb11808c#heart-outlined"></use>
+</svg>
+    <span class="badge bg-theme-primary indent-0 inline-block ml-1 text-1 text-white absolute mobile:text-0 tablet:text-0 laptop:text-0 bottom-0 right-0 transform translate-x-1 translate-y-1 desktop:translate-x-2 desktop:translate-y-2" data-badge="data-badge">0</span>
+</div>
+    </div>
+    </button>
+</li>
+
+
+<li class="h-11 flex items-center nav-item mobile:flex-none tablet:flex-none laptop:flex desktop:hidden ml-auto right-0" url="https://www.leasingmarkt.de/parkplatz">
+    <button class="flex items-center" data-href="https://www.leasingmarkt.de/parkplatz" target="_self">
+        <div class="relative">
+        <div class="ml-2" data-favlist-count="data-favlist-count">
+    <svg  viewbox="0 0 16 16" width="16px" height="16px" fill="">
+    <use xlink:href="/res/v3/images/icons.svg?id=a29288d93520919961929917bb11808c#heart-outlined"></use>
+</svg>
+    <span class="badge bg-theme-primary indent-0 inline-block ml-1 text-1 text-white absolute mobile:text-0 tablet:text-0 laptop:text-0 bottom-0 right-0 transform translate-x-1 translate-y-1 desktop:translate-x-2 desktop:translate-y-2" data-badge="data-badge">0</span>
+</div>
+    </div>
+    </button>
+</li>
+
+                <li
+    class="has-flyout relative  h-11 flex items-center menu-item ml-3 laptop:hidden desktop:flex"
+    class="  has-flyout relative "
+    data-menu-item  data-has-flyout     >
+            <div class="dropdown-control cursor-pointer flex desktop:flex-none items-center" title="">
+            Konto 
+            <svg viewBox="0 0 24 24" class="inline-block w-3 h-3 text-black-200"><use xlink:href="/res/v3/images/icons.svg?id=a29288d93520919961929917bb11808c#arrow-down"></use></svg>
+            
+        </div>
+                <div class="dropdown-menu absolute bg-white border-t-2 duration-200 flyout-content mobile:mt-8 mt-11 rounded-b-xl overflow-hidden shadow top-0 z-10 right-0">
+            <div class="w-80 mobile:w-full">
+    <div class="favlist-register">
+        <span class="favlist-register__header">Jetzt kostenlos registrieren!</span>
+        <div class="favlist-register__bullet-list">
+                        <div class="favlist-register__bullet-list-item">
+                <div class="flex gap-2 items-center">
+    <div class="iconTextBox bg-green-20" identifier="checkmark">
+        <svg  viewbox="0 0 16 16" width="16px" height="16px" fill="">
+    <use xlink:href="/res/v3/images/icons.svg?id=a29288d93520919961929917bb11808c#as24rebrand-checkmark"></use>
+</svg>
+    </div>
+    Bis zu drei Angebote schnell &amp; einfach miteinander vergleichen
+</div>
+            </div>
+                        <div class="favlist-register__bullet-list-item">
+                <div class="flex gap-2 items-center">
+    <div class="iconTextBox bg-green-20" identifier="checkmark">
+        <svg  viewbox="0 0 16 16" width="16px" height="16px" fill="">
+    <use xlink:href="/res/v3/images/icons.svg?id=a29288d93520919961929917bb11808c#as24rebrand-checkmark"></use>
+</svg>
+    </div>
+    Jederzeit auf geparkte Fahrzeuge zugreifen – im Web &amp; in der App!
+</div>
+            </div>
+                        <div class="favlist-register__bullet-list-item">
+                <div class="flex gap-2 items-center">
+    <div class="iconTextBox bg-green-20" identifier="checkmark">
+        <svg  viewbox="0 0 16 16" width="16px" height="16px" fill="">
+    <use xlink:href="/res/v3/images/icons.svg?id=a29288d93520919961929917bb11808c#as24rebrand-checkmark"></use>
+</svg>
+    </div>
+    Vereinfachte Kommunikation mit dem Händler
+</div>
+            </div>
+                    </div>
+        <div class="favlist-register__button-box">
+                <a
+        class="lm-button button--base button--green"
+        data-track-event-category="Registrierung" data-track-event-label="Kostenlos registrieren" data-track-event-action="Klick Jetzt registrieren" data-track-event-value="1"
+        href="https://www.leasingmarkt.de/register"
+                target="_self"
+    >Kostenlos registrieren</a>
+                <div>
+                    Sie haben bereits ein Konto?
+                    <a
+        class="a-regular"
+        data-track-event-category="Registrierung" data-track-event-label="Jetzt anmelden" data-track-event-action="Klick Jetzt anmelden" data-track-event-value="1"
+        href="https://www.leasingmarkt.de/login"
+                target="_self"
+    >Jetzt anmelden</a>
+                </div>
+        </div>
+    </div>
+</div>
+        </div>
+    </li>
+
+
+<li
+    class="has-flyout relative  h-11 flex items-center menu-item items-center mobile:flex-none tablet:flex-none laptop:flex desktop:hidden ml-3" data-profile-item="data-profile-item"
+    class="  has-flyout relative "
+    data-menu-item  data-has-flyout     >
+            <div class="dropdown-control cursor-pointer flex desktop:flex-none items-center" title="">
+            <div class="h-4 mr-1 relative w-4">
+            <svg data-profile-icon-active="data-profile-icon-active" class="absolute ml-2 mt-1" viewbox="0 0 16 16" width="16px" height="16px" fill="">
+    <use xlink:href="/res/v3/images/icons.svg?id=a29288d93520919961929917bb11808c#profile"></use>
+</svg>
+            <svg data-profile-icon-inactive="data-profile-icon-inactive" class="absolute ml-2 mt-1 svg-color-turquoise-100" viewbox="0 0 16 16" width="16px" height="16px" fill="">
+    <use xlink:href="/res/v3/images/icons.svg?id=a29288d93520919961929917bb11808c#profile-filled"></use>
+</svg>
+        </div> 
+            <svg viewBox="0 0 24 24" class="inline-block w-3 h-3 text-black-200"><use xlink:href="/res/v3/images/icons.svg?id=a29288d93520919961929917bb11808c#arrow-down"></use></svg>
+            
+        </div>
+                <div class="dropdown-menu absolute bg-white border-t-2 duration-200 flyout-content mobile:mt-8 mt-11 rounded-b-xl overflow-hidden shadow top-0 z-10 right-0">
+            <div class="w-80 mobile:w-full">
+    <div class="favlist-register">
+        <span class="favlist-register__header">Jetzt kostenlos registrieren!</span>
+        <div class="favlist-register__bullet-list">
+                        <div class="favlist-register__bullet-list-item">
+                <div class="flex gap-2 items-center">
+    <div class="iconTextBox bg-green-20" identifier="checkmark">
+        <svg  viewbox="0 0 16 16" width="16px" height="16px" fill="">
+    <use xlink:href="/res/v3/images/icons.svg?id=a29288d93520919961929917bb11808c#as24rebrand-checkmark"></use>
+</svg>
+    </div>
+    Bis zu drei Angebote schnell &amp; einfach miteinander vergleichen
+</div>
+            </div>
+                        <div class="favlist-register__bullet-list-item">
+                <div class="flex gap-2 items-center">
+    <div class="iconTextBox bg-green-20" identifier="checkmark">
+        <svg  viewbox="0 0 16 16" width="16px" height="16px" fill="">
+    <use xlink:href="/res/v3/images/icons.svg?id=a29288d93520919961929917bb11808c#as24rebrand-checkmark"></use>
+</svg>
+    </div>
+    Jederzeit auf geparkte Fahrzeuge zugreifen – im Web &amp; in der App!
+</div>
+            </div>
+                        <div class="favlist-register__bullet-list-item">
+                <div class="flex gap-2 items-center">
+    <div class="iconTextBox bg-green-20" identifier="checkmark">
+        <svg  viewbox="0 0 16 16" width="16px" height="16px" fill="">
+    <use xlink:href="/res/v3/images/icons.svg?id=a29288d93520919961929917bb11808c#as24rebrand-checkmark"></use>
+</svg>
+    </div>
+    Vereinfachte Kommunikation mit dem Händler
+</div>
+            </div>
+                    </div>
+        <div class="favlist-register__button-box">
+                <a
+        class="lm-button button--base button--green"
+        data-track-event-category="Registrierung" data-track-event-label="Kostenlos registrieren" data-track-event-action="Klick Jetzt registrieren" data-track-event-value="1"
+        href="https://www.leasingmarkt.de/register"
+                target="_self"
+    >Kostenlos registrieren</a>
+                <div>
+                    Sie haben bereits ein Konto?
+                    <a
+        class="a-regular"
+        data-track-event-category="Registrierung" data-track-event-label="Jetzt anmelden" data-track-event-action="Klick Jetzt anmelden" data-track-event-value="1"
+        href="https://www.leasingmarkt.de/login"
+                target="_self"
+    >Jetzt anmelden</a>
+                </div>
+        </div>
+    </div>
+</div>
+        </div>
+    </li>
+    </ul>
+
+    <div
+    data-menu-toggle="main-menu-mobile-profile"
+    class="cursor-pointer hidden tablet:flex flex-none mr-3 ml-2 items-center mobile:flex">
+    <svg data-menu-toggle-open="data-menu-toggle-open" class="mr-1" viewbox="0 0 16 16" width="16px" height="16px" fill="">
+    <use xlink:href="/res/v3/images/icons.svg?id=a29288d93520919961929917bb11808c#profile"></use>
+</svg>
+    <svg data-menu-toggle-closed="data-menu-toggle-closed" class="hidden mr-1" viewbox="0 0 16 16" width="16px" height="16px" fill="">
+    <use xlink:href="/res/v3/images/icons.svg?id=a29288d93520919961929917bb11808c#profile-filled"></use>
+</svg>
+    </div>
+
+<div data-menu-content="main-menu-mobile-profile" class="dropdown-menu absolute bg-white border-t-2 p-2 hidden mt-11 mobile:mt-8 rounded-b shadow top-0 duration-200 right-0 desktop:hidden laptop:hidden">
+    <div class="w-80 mobile:w-full">
+    <div class="favlist-register">
+        <span class="favlist-register__header">Jetzt kostenlos registrieren!</span>
+        <div class="favlist-register__bullet-list">
+                        <div class="favlist-register__bullet-list-item">
+                <div class="flex gap-2 items-center">
+    <div class="iconTextBox bg-green-20" identifier="checkmark">
+        <svg  viewbox="0 0 16 16" width="16px" height="16px" fill="">
+    <use xlink:href="/res/v3/images/icons.svg?id=a29288d93520919961929917bb11808c#as24rebrand-checkmark"></use>
+</svg>
+    </div>
+    Bis zu drei Angebote schnell &amp; einfach miteinander vergleichen
+</div>
+            </div>
+                        <div class="favlist-register__bullet-list-item">
+                <div class="flex gap-2 items-center">
+    <div class="iconTextBox bg-green-20" identifier="checkmark">
+        <svg  viewbox="0 0 16 16" width="16px" height="16px" fill="">
+    <use xlink:href="/res/v3/images/icons.svg?id=a29288d93520919961929917bb11808c#as24rebrand-checkmark"></use>
+</svg>
+    </div>
+    Jederzeit auf geparkte Fahrzeuge zugreifen – im Web &amp; in der App!
+</div>
+            </div>
+                        <div class="favlist-register__bullet-list-item">
+                <div class="flex gap-2 items-center">
+    <div class="iconTextBox bg-green-20" identifier="checkmark">
+        <svg  viewbox="0 0 16 16" width="16px" height="16px" fill="">
+    <use xlink:href="/res/v3/images/icons.svg?id=a29288d93520919961929917bb11808c#as24rebrand-checkmark"></use>
+</svg>
+    </div>
+    Vereinfachte Kommunikation mit dem Händler
+</div>
+            </div>
+                    </div>
+        <div class="favlist-register__button-box">
+                <a
+        class="lm-button button--base button--green"
+        data-track-event-category="Registrierung" data-track-event-label="Kostenlos registrieren" data-track-event-action="Klick Jetzt registrieren" data-track-event-value="1"
+        href="https://www.leasingmarkt.de/register"
+                target="_self"
+    >Kostenlos registrieren</a>
+                <div>
+                    Sie haben bereits ein Konto?
+                    <a
+        class="a-regular"
+        data-track-event-category="Registrierung" data-track-event-label="Jetzt anmelden" data-track-event-action="Klick Jetzt anmelden" data-track-event-value="1"
+        href="https://www.leasingmarkt.de/login"
+                target="_self"
+    >Jetzt anmelden</a>
+                </div>
+        </div>
+    </div>
+</div>
+</div>
+</nav>
+            </header>
+</div>
+
+    
+            <section class="pb-6 bg-grey-100 desktop:px-3 laptop:px-3" data-ga4-container="Register">
+        <form method="post" action="https://www.leasingmarkt.de/register" id="register-form">
+            <input type="hidden" name="_token" value="GISESzd0JIZIwpxFjLnAOj0smDkGHANWk7f9A4v8" autocomplete="off">            <div class="desktop:container flex flex-col mx-auto">
+                                    <div class="desktop:container mx-auto w-full mb-3" data-listing-breadcrumb-container>
+                        <div class="mt-4-5 text-black-100">
+    <script type="application/ld+json">
+        {"@context":"http:\/\/schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":0,"item":{"@id":"https:\/\/www.leasingmarkt.de","name":"LeasingMarkt.de"}},{"@type":"ListItem","position":1,"item":{"@id":"https:\/\/www.leasingmarkt.de\/register","name":"Registrierung"}}]}
+    </script>
+
+<div class="flex items-center  tablet:pl-3 mobile:pl-3">
+                        <a
+        class="text-1 hover:underline text-black-100 hover:text-black-100"
+        
+        href="https://www.leasingmarkt.de"
+                target="_self"
+    >LeasingMarkt.de</a>
+
+            <svg class="fill-current svg-color-black-100 mobile:hidden" aria-hidden="true" viewbox="0 0 16 16" width="16px" height="16px" fill="">
+    <use xlink:href="/res/v3/images/icons.svg?id=a29288d93520919961929917bb11808c#arrow-right"></use>
+</svg>
+
+                                <span class="text-1 mobile:hidden text-black-100 hover:text-black-100">Registrierung</span>
+            </div>
+</div>
+                    </div>
+                                <div class="register-form-box" style="max-width: 849px;">
+                    <h1 class="text-6 font-semibold text-color-black-120">Jetzt registrieren und noch einfacher Ihr Wunschfahrzeug finden!</h1>
+                    <div class="flex mobile:flex-col tablet:flex-col flex-row gap-x-3 gap-y-2">
+                        <div class="flex gap-2 items-center">
+    <div class="iconTextBox" identifier="checkmark">
+        <svg  viewbox="0 0 16 16" width="16px" height="16px" fill="">
+    <use xlink:href="/res/v3/images/icons.svg?id=a29288d93520919961929917bb11808c#as24rebrand-checkmark"></use>
+</svg>
+    </div>
+    <span class="text-black-100">Bis zu drei Angebote schnell miteinander vergleichen</span>
+</div>
+                        <div class="flex gap-2 items-center">
+    <div class="iconTextBox" identifier="checkmark">
+        <svg  viewbox="0 0 16 16" width="16px" height="16px" fill="">
+    <use xlink:href="/res/v3/images/icons.svg?id=a29288d93520919961929917bb11808c#as24rebrand-checkmark"></use>
+</svg>
+    </div>
+    <span class="text-black-100">Vereinfachte Kommunikation mit dem Händler</span>
+</div>
+                    </div>
+
+                    
+                    <p class="text-1 text-color-black-70">* Pflichtfelder</p>
+
+                    
+                    <div class="grid grid-cols-2 mobile:grid-cols-1 gap-3">
+                        <div
+    class="redesign-dropdown"
+    data-redesign-dropdown
+    data-dropdown-frameless=""
+    data-dropdown-settings="{&quot;name&quot;:&quot;gender&quot;,&quot;searchable&quot;:false,&quot;multiSelect&quot;:false,&quot;disabledIfEmpty&quot;:true,&quot;emptyText&quot;:&quot;Anrede*&quot;,&quot;showEmptyText&quot;:true,&quot;slim&quot;:false}"
+    data-dropdown-name="gender"
+    data-input
+    tabindex="0">
+    <div class="redesign-dropdown__options" hidden>
+                <div data-value="m"  >Herr</div>
+                            <div data-value="f"  >Frau</div>
+    </div>
+    <div class="redesign-dropdown__value" hidden></div>
+    <div class="redesign-dropdown__label-container">
+                <div class="redesign-dropdown__selection-container">
+            <div class="redesign-dropdown__value-label" data-dropdown-selection></div>
+            <div class="redesign-dropdown__label-icon">
+                <svg class="text-black-200" viewbox="0 0 24 24" width="24px" height="24px" fill="">
+    <use xlink:href="/res/v3/images/icons.svg?id=a29288d93520919961929917bb11808c#arrow-down"></use>
+</svg>
+            </div>
+        </div>
+    </div>
+    <dialog>
+        <template class="option">
+            <div class="option" tabindex="0">
+                <div class="redesign-dropdown__option__checkbox">
+                    <label
+    class="simple-checkbox"
+    for=""
+    data-ga-action=""
+    data-ga-label=""
+>
+    <input type="checkbox"
+       
+       
+       
+
+           >
+    <div class="box">
+        <svg class="svg-color-white" viewbox="0 0 20 20" width="20px" height="20px" fill="">
+    <use xlink:href="/res/v3/images/icons.svg?id=a29288d93520919961929917bb11808c#checkmark"></use>
+</svg>
+    </div>
+</label>
+                </div>
+                <div class="redesign-dropdown__option__label"></div>
+            </div>
+        </template>
+        <div class="redesign-dropdown__menu__input">
+                        <div class="redesign-dropdown__selection-container">
+                <input
+                    type="text" autocomplete="off"
+                                            readonly
+                                    >
+                <svg data-action="clear" viewbox="0 0 24 24" width="24px" height="24px" fill="">
+    <use xlink:href="/res/v3/images/icons.svg?id=a29288d93520919961929917bb11808c#cross"></use>
+</svg>
+            </div>
+        </div>
+        <div class="redesign-dropdown__menu__options">
+            <div data-no-results hidden>Keine Treffer gefunden</div>
+        </div>
+    </dialog>
+</div>
+                        <div
+    class="col-start-1"
+    
+>
+    <label
+        class="redesign-text-input"
+        title=""
+                    >
+        <div class=""></div>
+                    <input
+                name="name"
+                class=""
+                                 type="text"  placeholder="Vorname*"  value=""                             >
+                                </label>
+    </div>
+                        <div
+    class=""
+    
+>
+    <label
+        class="redesign-text-input"
+        title=""
+                    >
+        <div class=""></div>
+                    <input
+                name="surname"
+                class=""
+                                 type="text"  placeholder="Nachname*"  value=""                             >
+                                </label>
+    </div>
+                        <div
+    class=""
+    
+>
+    <label
+        class="redesign-text-input"
+        title=""
+                    >
+        <div class=""></div>
+                    <input
+                name="email"
+                class=""
+                                 type="email"  placeholder="E-Mail-Adresse*"  value=""                             >
+                                </label>
+    </div>
+                                <div class="flex flex-col" data-check-password-strength>
+    <div
+    class=""
+    
+>
+    <label
+        class="redesign-text-input"
+        title=""
+                    >
+        <div class=""></div>
+                    <input
+                name="password"
+                class=""
+                                 type="password"  placeholder="Passwort*"  value=""                             >
+                                        <div class="redesign-text-input__extension--no-line redesign-text-input__extension" hidden"><div data-password-toggle>
+                <svg data-show="data-show" viewbox="0 0 16 16" width="16px" height="16px" fill="">
+    <use xlink:href="/res/v3/images/icons.svg?id=a29288d93520919961929917bb11808c#eye"></use>
+</svg>
+                <svg data-hide="data-hide" viewbox="0 0 16 16" width="16px" height="16px" fill="">
+    <use xlink:href="/res/v3/images/icons.svg?id=a29288d93520919961929917bb11808c#eye-hidden"></use>
+</svg>
+            </div></div>
+            </label>
+    </div>
+            <div class="password-strength password-strength--initial" data-password-strength>
+            <div class="password-strength__bar" data-strength-bar="1"></div>
+            <div class="password-strength__security-label" data-security-label>
+                <span class="password-strength__security-label__secure">Sicher</span>
+                <span class="password-strength__security-label__insecure">Unsicher</span>
+            </div>
+            <div class="password-strength__bar" data-strength-bar="2"></div>
+            <div class="password-strength__rule" data-rule="length">
+                <div class="password-strength__rule__point" data-circle></div>
+                mind. 8 Zeichen
+            </div>
+            <div class="password-strength__bar" data-strength-bar="3"></div>
+            <div class="password-strength__rule" data-rule="digit">
+                <div class="password-strength__rule__point" data-circle></div>
+                mind. 1 Ziffer
+            </div>
+        </div>
+    </div>
+
+                        </div>
+
+                    <div class="flex flex-col gap-y-3">
+                        <label class="flex gap-x-3-4" for="agb_datenschutz">
+    <label
+    class="simple-checkbox"
+    for="agb_datenschutz"
+    data-ga-action="AGB &amp;amp; Datenschutzerklärung"
+    data-ga-label=""
+>
+    <input type="checkbox"
+                   name="agb_datenschutz"
+       
+                   value="1"
+       
+       
+
+                   id="agb_datenschutz"
+           >
+    <div class="box">
+        <svg class="svg-color-white" viewbox="0 0 20 20" width="20px" height="20px" fill="">
+    <use xlink:href="/res/v3/images/icons.svg?id=a29288d93520919961929917bb11808c#checkmark"></use>
+</svg>
+    </div>
+</label>
+    <span class="label text-1-2"><strong>Ja</strong>, ich stimme den <a href="https://www.leasingmarkt.de/allgemeine-geschaeftsbedingungen" target="_blank">AGB</a> und der <a href="https://www.leasingmarkt.de/datenschutz" target="_blank">Datenschutzerklärung</a> von LeasingMarkt.de GmbH zu.*</span>
+</label>
+                        <label class="flex gap-x-3-4" for="newsletter">
+    <label
+    class="simple-checkbox"
+    for="newsletter"
+    data-ga-action="Newsletter"
+    data-ga-label=""
+>
+    <input type="checkbox"
+                   name="newsletter"
+       
+                   value="1"
+       
+       
+
+                   id="newsletter"
+           >
+    <div class="box">
+        <svg class="svg-color-white" viewbox="0 0 20 20" width="20px" height="20px" fill="">
+    <use xlink:href="/res/v3/images/icons.svg?id=a29288d93520919961929917bb11808c#checkmark"></use>
+</svg>
+    </div>
+</label>
+    <span class="label text-1-2"><strong>Ja,</strong> ich möchte kostenlos die besten Angebote und weitere Services zum Thema Leasing per Newsletter erhalten. Eine Abmeldung ist jederzeit möglich</span>
+</label>
+                    </div>
+
+                    <div class="flex flex-col gap-4 mobile:z-10 mobile:fixed mobile:bottom-0 mobile:left-0 mobile:right-0 mobile:bg-white mobile:py-4 mobile:border-t mobile:border-black-30">
+                        <input type="hidden" name="show-as24-cmp">
+                        <button
+    class="redesign-button self-center" type="submit"
+    
+    data-button-color="primary"
+    type="button"
+     data-track-event-category="Button" data-track-event-label="Button" data-track-event-action="Click" data-track-event-value="1"
+    >Kostenlos registrieren</button>
+
+                        <p class="text-1-2 self-center">
+                            Sie haben bereits ein Konto? <a href="/login">Anmelden</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section>
+
+    <footer id="footer" data-ga4-container="Footer">
+                                                <div class="block mobile:hidden">
+                            <div class="footer__section py-3 border-t border-black-50">
+                                <strong
+                                    class="flex items-center container mx-auto px-3">
+                                    <img
+    src="https://www.leasingmarkt.de/images/icons/as24-leasingmarkt.svg" alt="LeasingMarkt.de" class="lm-logo-icon mr-2 inline-block" title="LeasingMarkt.de" width="250" height="190" loading="lazy"
+>
+                                    LeasingMarkt.de: Die Nr. 1 für Auto-Leasing.
+                                </strong>
+                            </div>
+                            <div class="footer__section py-3 border-b border-black-50" data-newsletter-collapsible>
+                                <div class="flex container mx-auto px-3">
+                                    <ul class="w-1/4 tablet:w-1/3">
+    <li class="mb-2 text-2"><strong>Unternehmen</strong></li>
+    <li class="mb-2 text-1-2">
+        <a
+        class="text-black-100"
+        
+        href="https://www.autoscout24.com/as24-career-pages/leasingmarkt-de/"
+         rel="noreferrer noopener"         target="_blank"
+    >Über LeasingMarkt.de</a>
+    </li>
+            <li class="mb-2 text-1-2">
+            <a
+        class="text-black-100"
+        
+        href="https://www.autoscout24.com/as24-career-pages/search-roles/?company=Leasingmarkt.de"
+         rel="noreferrer noopener"         target="_blank"
+    >Karriere
+                <span class="base-badge font-bold rounded px-1 bg-gradient-to-r to-turquoise-100 from-turquoise-120 indent-0 inline-block ml-1 text-1 text-white">Jetzt bewerben!</span></a>
+        </li>
+        <li class="mb-2 text-1-2">
+        <a
+        class="text-black-100"
+        
+        href="https://www.leasingmarkt.de/partner"
+                target="_self"
+    >Für Händler</a>
+    </li>
+            <li class="mb-2 text-1-2">
+            <a
+        class="text-black-100"
+        
+        href="https://www.leasingmarkt.de/kooperation-mit-autoscout24"
+                target="_self"
+    >Kooperation mit AutoScout24</a>
+        </li>
+                <li class="mb-2 text-1-2"><a
+        class="text-black-100"
+        
+        href="https://www.leasingmarkt.de/presse"
+                target="_self"
+    >Presse</a>
+</li>
+        <li class="mb-2 text-1-2"><a
+        class="text-black-100"
+        
+        href="https://www.leasingmarkt.de/allgemeine-geschaeftsbedingungen"
+                target="_self"
+    >AGB</a>
+</li>
+    <li class="mb-2 text-1-2"><a
+        class="text-black-100"
+        
+        href="https://www.leasingmarkt.de/datenschutz"
+                target="_self"
+    >Datenschutz</a>
+</li>
+            <li class="mb-2 text-1-2"><a
+        class="text-black-100"
+        
+        href="https://www.leasingmarkt.de/impressum"
+                target="_self"
+    >Impressum</a>
+</li>
+    </ul>
+                                    <ul class="w-1/4 tablet:w-1/3">
+    <li class="mb-2 text-2"><strong>Service</strong></li>
+    <li class="mb-2 text-1-2"><a
+        class="text-black-100"
+        
+        href="https://www.leasingmarkt.de/kontakt"
+                target="_self"
+    >Kontakt</a>
+</li>
+    <li class="mb-2 text-1-2"><a
+        class="text-black-100"
+        
+        href="https://www.leasingmarkt.de/ratgeber"
+                target="_self"
+    >Ratgeber</a>
+</li>
+            <li class="mb-2 text-1-2"><a
+        class="text-black-100"
+        
+        href="https://www.leasingmarkt.de/magazin"
+                target="_self"
+    >Magazin</a>
+</li>
+            <li class="mb-2 text-1-2"><a onclick="window.__tcfapi && window.__tcfapi('showConsentManager', 2, () => null)" class="text-black-100" href="javascript:void(0);">Privacy Settings</a></li>
+            <li class="mb-2 text-1-2"><a
+        class="text-black-100"
+        
+        href="https://www.leasingmarkt.de/so-funktioniert-leasingmarkt"
+                target="_self"
+    >So funktioniert&#039;s</a>
+</li>
+        <li class="mb-2 text-1-2"><a
+        class="text-black-100"
+        
+        href="https://www.leasingmarkt.de/ratgeber/faq"
+                target="_self"
+    >Häufig gestellte Fragen</a>
+</li>
+    <li class="mb-2 text-1-2"><a
+        class="text-black-100"
+        
+        href="https://www.leasingmarkt.de/ratgeber/leasing-lexikon"
+                target="_self"
+    >Leasing-Lexikon</a>
+</li>
+                        <li class="mb-2 text-1-2"><a
+        class="text-black-100"
+        
+        href="https://www.leasingmarkt.de/auto-tests"
+                target="_self"
+    >Auto-Tests</a>
+</li>
+                        <li class="mb-2 text-1-2 flex items-center"><a
+        class="text-black-100"
+        
+        href="https://autoscout24-media.com/"
+         rel="noreferrer noopener nofollow"         target="_blank"
+    >Werben auf LeasingMarkt.de</a>
+</li>
+    </ul>
+                                    <ul class="w-1/4 tablet:w-1/3">
+    <li class="mb-2 text-2"><strong>Top-Kategorien</strong></li>
+        <li class="mb-2 text-1-2">
+            <a
+        class="text-black-100"
+        
+        href="https://www.leasingmarkt.de/deals"
+                target="_self"
+    >Leasing Deals</a>
+        </li>
+
+            <li class="mb-2 text-1-2">
+            <a
+        class="text-black-100 hover:text-turquoise-100"
+        
+        href="https://www.leasingmarkt.de/gebrauchtwagen"
+                target="_self"
+    >Gebrauchtwagen Leasing</a>
+        </li>
+                <li class="mb-2 text-1-2">
+            <a
+        class="text-black-100 hover:text-turquoise-100"
+        
+        href="https://www.leasingmarkt.de/leasing-ohne-anzahlung"
+                target="_self"
+    >Leasing ohne Anzahlung</a>
+        </li>
+        <li class="mb-2 text-1-2">
+        <a
+        class="text-black-100 hover:text-turquoise-100"
+        
+        href="https://www.leasingmarkt.de/e-auto"
+                target="_self"
+    >E-Auto Leasing</a>
+    </li>
+    <li class="mb-2 text-1-2">
+        <a
+        class="text-black-100 hover:text-turquoise-100"
+        
+        href="https://www.leasingmarkt.de/privatleasing"
+                target="_self"
+    >Privatleasing</a>
+    </li>
+            <li class="mb-2 text-1-2">
+            <a
+        class="text-black-100 hover:text-turquoise-100"
+        
+        href="https://www.leasingmarkt.de/leasing-vergleiche"
+                target="_self"
+    >Leasing-Vergleiche</a>
+        </li>
+        <li class="mb-2 text-1-2">
+        <a
+        class="text-black-100 hover:text-turquoise-100"
+        
+        href="https://www.leasingmarkt.de/hersteller"
+                target="_self"
+    >Herstellerverzeichnis</a>
+    </li>
+    <li class="mb-2 text-1-2">
+        <a
+        class="text-black-100 hover:text-turquoise-100"
+        
+        href="https://www.leasingmarkt.de/haendler"
+                target="_self"
+    >Händlerverzeichnis</a>
+    </li>
+            <li class="mb-2 text-1-2">
+            <a
+        class="text-black-100"
+        
+        href="https://www.leasingmarkt.de/region"
+                target="_self"
+    >Autoleasing in der Nähe</a>
+        </li>
+    
+</ul>
+                                    <div class="tablet:w-1/3 tablet:hidden laptop:w-1/4 desktop:w-1/4 w-full block">
+                                        <ul>
+    <li class="mb-2 mobile:mb-4 text-2"><strong>In Verbindung bleiben</strong></li>
+    <li class="mb-2 mobile:mb-4 text-1-2">
+        <span class="mobile:hidden block">
+            Erhalten Sie die neuesten Leasing-Angebote und weitere Services zum Thema Leasing von uns und den mit LeasingMarkt.de verbundenen Unternehmen kostenlos per E-Mail.
+            
+        </span>
+        <span class="mobile:block hidden">Erhalten Sie die neuesten <strong>Leasing-Angebote</strong> und weitere Services zum Thema Leasing von uns und den mit LeasingMarkt.de verbundenen Unternehmen, kostenlos per E-Mail.</span>
+    </li>
+    <li class="mb-2 mobile:mb-4">
+                                    <form
+            action="https://www.leasingmarkt.de/newsletter"
+            method="post" name="mc-embedded-subscribe-form" class="validate nobottommargin" data-ga4-parameters="">
+            <input type="hidden" name="_token" value="GISESzd0JIZIwpxFjLnAOj0smDkGHANWk7f9A4v8" autocomplete="off">            <input type="hidden" name="source" value="Footer">
+            <div id="mc_embed_signup_scroll" class="flex tablet:inline-flex">
+                <label class="flex rounded h-5 mobile:h-6 tablet:h-6 overflow-hidden border border-black-50 w-full" data-newsletter-collapsible-toggle="data-newsletter-collapsible-toggle" title="E-Mail">
+    <input class="h-full outline-none px-2 text-black-100 w-full " name="email" type="email" value=""
+            placeholder="E-Mail-Adresse">
+</label>
+                <div id="mce-responses" class="clear">
+                    <div class="response" id="mce-error-response" style="display:none"></div>
+                    <div class="response" id="mce-success-response" style="display:none"></div>
+                </div>
+                <div class="inline-block">
+                    <button class="px-3 rounded text-2 font-semibold flex  items-center justify-around h-5 mobile:h-6 mobile:w-full tablet:h-6 tablet:w-full atom-button-primary rounded-full lm-button  px-3 rounded text-1-2 font-semibold inline-flex items-center justify-around h-5 mobile:h-6 mobile:w-full tablet:h-6 tablet:w-full flex-none ml-2 rounded-none" value="Subscribe" name="subscribe" >Absenden</button>
+                </div>
+            </div>
+                        <p class="text-1 text-black-60 pt-4 mobile:hidden hidden " data-newsletter-collapsible-content >
+                Mit der Anmeldung zum Newsletter stimmen Sie zu, dass LeasingMarkt.de aus Ihrem Kauf- und Nutzungsverhalten personenbezogene Profile erstellt, um Werbe- und Webangebote besser auf Ihre persönlichen Interessen auszurichten. Die Einwilligung können Sie jederzeit widerrufen. Informationen dazu, wie LeasingMarkt.de mit Ihren Daten umgeht, finden Sie in unserer <a
+        title="Datenschutzerklärung"
+        
+        href="https://www.leasingmarkt.de/datenschutz"
+                target="_self"
+    ><span class="text-turquoise-100 newsletter-link">Datenschutzerklärung</span>.</a>
+ Eine Abmeldung vom Newsletter ist jederzeit möglich.
+            </p>
+            <p class="text-1 text-black-60 mt-4 mobile:hidden hidden desktop:hidden tablet:hidden laptop:hidden" data-newsletter-mobile-collapsible-content >
+                Mit der Anmeldung zum Newsletter stimmen Sie zu, dass LeasingMarkt.de aus Ihrem Kauf- und Nutzungsverhalten personenbezogene Profile erstellt, um Werbe- und Webangebote besser auf Ihre persönlichen Interessen auszurichten. Die Einwilligung können Sie jederzeit widerrufen. Informationen dazu, wie LeasingMarkt.de mit Ihren Daten umgeht, finden Sie in unserer <a
+        title="Datenschutzerklärung"
+        
+        href="https://www.leasingmarkt.de/datenschutz"
+                target="_self"
+    ><span class="text-turquoise-100 newsletter-link">Datenschutzerklärung</span>.</a>
+ Eine Abmeldung vom Newsletter ist jederzeit möglich.
+            </p>
+        </form>
+    </li>
+</ul>
+                                        <ul data-newsletter-hideble-collapsible-content>
+            <li class="mb-2 mobile:mb-4 text-1-2">
+            <a
+        class="app-logo text-black-100 svg-color-black-100 text-turquoise-100 svg-color-turquoise-100 mobile:mb-4"
+        
+        href="https://itunes.apple.com/de/app/leasingmarkt-de-auto-leasing-angebote-suche/id1261336827?mt=8"
+         rel="noreferrer noopener"         target="_blank"
+    ><span class="flex items-center">
+                    <svg class="mb-1-2 mr-2" viewbox="0 0 11 14" width="11px" height="14px" fill="">
+    <use xlink:href="/res/v3/images/icons.svg?id=a29288d93520919961929917bb11808c#os-ios"></use>
+</svg>
+                    LeasingMarkt.de für iOS 
+                </span></a>
+        </li>
+        <li class="mb-4 text-1-2">
+            <a
+        class="app-logo text-black-100 svg-color-black-100 text-turquoise-100 svg-color-turquoise-100 mobile:mb-4"
+        
+        href="https://play.google.com/store/apps/details?id=de.leasingmarkt.app"
+         rel="noreferrer noopener"         target="_blank"
+    ><span class="flex items-center">
+                    <svg class="mb-1-2 mr-2" viewbox="0 0 11 14" width="11px" height="14px" fill="">
+    <use xlink:href="/res/v3/images/icons.svg?id=a29288d93520919961929917bb11808c#os-android"></use>
+</svg>
+                    LeasingMarkt.de für Android  
+                </span></a>
+        </li>
+        <li>
+        <div class="flex">
+            <a
+        class="mr-2 svg-color-black-100 hover:svg-color-turquoise-100"
+        
+        href="http://www.facebook.com/LeasingMarkt"
+         rel="noreferrer noopener"         target="_blank"
+    ><svg  viewbox="0 0 33 34" width="33px" height="34px" fill="">
+    <use xlink:href="/res/v3/images/icons.svg?id=a29288d93520919961929917bb11808c#social-facebook"></use>
+</svg>
+                <div class="sr-only">Facebook</div></a>
+            <a
+        class="mr-2 svg-color-black-100 hover:svg-color-turquoise-100"
+        
+        href="https://www.instagram.com/leasingmarkt.de/"
+         rel="noreferrer noopener"         target="_blank"
+    ><svg  viewbox="0 0 33 34" width="33px" height="34px" fill="">
+    <use xlink:href="/res/v3/images/icons.svg?id=a29288d93520919961929917bb11808c#social-instagram"></use>
+</svg>
+                <div class="sr-only">Instagram</div></a>
+                            <a
+        class="mr-2 svg-color-black-100 hover:svg-color-turquoise-100"
+        
+        href="https://www.youtube.com/c/LeasingMarktde"
+         rel="noreferrer noopener"         target="_blank"
+    ><svg  viewbox="0 0 34 34" width="34px" height="34px" fill="">
+    <use xlink:href="/res/v3/images/icons.svg?id=a29288d93520919961929917bb11808c#social-youtube"></use>
+</svg>
+                    <div class="sr-only">YouTube</div></a>
+                        <a
+        class="mr-2 svg-color-black-100 hover:svg-color-turquoise-100" title="LinkedIn"
+        
+        href="https://www.linkedin.com/company/leasingmarkt/"
+         rel="noreferrer noopener"         target="_blank"
+    ><svg  viewbox="0 0 32 34" width="32px" height="34px" fill="">
+    <use xlink:href="/res/v3/images/icons.svg?id=a29288d93520919961929917bb11808c#social-linkedin"></use>
+</svg></a>
+                                        <a
+        class="mr-2 svg-color-black-100 hover:svg-color-turquoise-100"
+        
+        href="https://www.tiktok.com/@leasingmarkt.de/"
+         rel="noreferrer noopener"         target="_blank"
+    ><svg  viewbox="0 0 34 34" width="34px" height="34px" fill="">
+    <use xlink:href="/res/v3/images/icons.svg?id=a29288d93520919961929917bb11808c#social-tiktok"></use>
+</svg>
+                    <div class="sr-only">TikTok</div></a>
+                    </div>
+    </li>
+</ul>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="footer__section py-3 border-b border-black-50 desktop:hidden laptop:hidden"
+                                 data-newsletter-collapsible>
+                                <div class="flex container mx-auto px-3">
+                                    <div class="w-2/3">
+                                        <ul>
+    <li class="mb-2 mobile:mb-4 text-2"><strong>In Verbindung bleiben</strong></li>
+    <li class="mb-2 mobile:mb-4 text-1-2">
+        <span class="mobile:hidden block">
+            Erhalten Sie die neuesten Leasing-Angebote und weitere Services zum Thema Leasing von uns und den mit LeasingMarkt.de verbundenen Unternehmen kostenlos per E-Mail.
+            
+        </span>
+        <span class="mobile:block hidden">Erhalten Sie die neuesten <strong>Leasing-Angebote</strong> und weitere Services zum Thema Leasing von uns und den mit LeasingMarkt.de verbundenen Unternehmen, kostenlos per E-Mail.</span>
+    </li>
+    <li class="mb-2 mobile:mb-4">
+                                    <form
+            action="https://www.leasingmarkt.de/newsletter"
+            method="post" name="mc-embedded-subscribe-form" class="validate nobottommargin" data-ga4-parameters="">
+            <input type="hidden" name="_token" value="GISESzd0JIZIwpxFjLnAOj0smDkGHANWk7f9A4v8" autocomplete="off">            <input type="hidden" name="source" value="Footer">
+            <div id="mc_embed_signup_scroll" class="flex tablet:inline-flex">
+                <label class="flex rounded h-5 mobile:h-6 tablet:h-6 overflow-hidden border border-black-50 w-full" data-newsletter-collapsible-toggle="data-newsletter-collapsible-toggle" title="E-Mail">
+    <input class="h-full outline-none px-2 text-black-100 w-full " name="email" type="email" value=""
+            placeholder="E-Mail-Adresse">
+</label>
+                <div id="mce-responses" class="clear">
+                    <div class="response" id="mce-error-response" style="display:none"></div>
+                    <div class="response" id="mce-success-response" style="display:none"></div>
+                </div>
+                <div class="inline-block">
+                    <button class="px-3 rounded text-2 font-semibold flex  items-center justify-around h-5 mobile:h-6 mobile:w-full tablet:h-6 tablet:w-full atom-button-primary rounded-full lm-button  px-3 rounded text-1-2 font-semibold inline-flex items-center justify-around h-5 mobile:h-6 mobile:w-full tablet:h-6 tablet:w-full flex-none ml-2 rounded-none" value="Subscribe" name="subscribe" >Absenden</button>
+                </div>
+            </div>
+                        <p class="text-1 text-black-60 pt-4 mobile:hidden hidden " data-newsletter-collapsible-content >
+                Mit der Anmeldung zum Newsletter stimmen Sie zu, dass LeasingMarkt.de aus Ihrem Kauf- und Nutzungsverhalten personenbezogene Profile erstellt, um Werbe- und Webangebote besser auf Ihre persönlichen Interessen auszurichten. Die Einwilligung können Sie jederzeit widerrufen. Informationen dazu, wie LeasingMarkt.de mit Ihren Daten umgeht, finden Sie in unserer <a
+        title="Datenschutzerklärung"
+        
+        href="https://www.leasingmarkt.de/datenschutz"
+                target="_self"
+    ><span class="text-turquoise-100 newsletter-link">Datenschutzerklärung</span>.</a>
+ Eine Abmeldung vom Newsletter ist jederzeit möglich.
+            </p>
+            <p class="text-1 text-black-60 mt-4 mobile:hidden hidden desktop:hidden tablet:hidden laptop:hidden" data-newsletter-mobile-collapsible-content >
+                Mit der Anmeldung zum Newsletter stimmen Sie zu, dass LeasingMarkt.de aus Ihrem Kauf- und Nutzungsverhalten personenbezogene Profile erstellt, um Werbe- und Webangebote besser auf Ihre persönlichen Interessen auszurichten. Die Einwilligung können Sie jederzeit widerrufen. Informationen dazu, wie LeasingMarkt.de mit Ihren Daten umgeht, finden Sie in unserer <a
+        title="Datenschutzerklärung"
+        
+        href="https://www.leasingmarkt.de/datenschutz"
+                target="_self"
+    ><span class="text-turquoise-100 newsletter-link">Datenschutzerklärung</span>.</a>
+ Eine Abmeldung vom Newsletter ist jederzeit möglich.
+            </p>
+        </form>
+    </li>
+</ul>
+                                    </div>
+                                    <div class="w-1/3">
+                                        <ul data-newsletter-hideble-collapsible-content>
+            <li class="mb-2 mobile:mb-4 text-1-2">
+            <a
+        class="app-logo text-black-100 svg-color-black-100 text-turquoise-100 svg-color-turquoise-100 mobile:mb-4"
+        
+        href="https://itunes.apple.com/de/app/leasingmarkt-de-auto-leasing-angebote-suche/id1261336827?mt=8"
+         rel="noreferrer noopener"         target="_blank"
+    ><span class="flex items-center">
+                    <svg class="mb-1-2 mr-2" viewbox="0 0 11 14" width="11px" height="14px" fill="">
+    <use xlink:href="/res/v3/images/icons.svg?id=a29288d93520919961929917bb11808c#os-ios"></use>
+</svg>
+                    LeasingMarkt.de für iOS 
+                </span></a>
+        </li>
+        <li class="mb-4 text-1-2">
+            <a
+        class="app-logo text-black-100 svg-color-black-100 text-turquoise-100 svg-color-turquoise-100 mobile:mb-4"
+        
+        href="https://play.google.com/store/apps/details?id=de.leasingmarkt.app"
+         rel="noreferrer noopener"         target="_blank"
+    ><span class="flex items-center">
+                    <svg class="mb-1-2 mr-2" viewbox="0 0 11 14" width="11px" height="14px" fill="">
+    <use xlink:href="/res/v3/images/icons.svg?id=a29288d93520919961929917bb11808c#os-android"></use>
+</svg>
+                    LeasingMarkt.de für Android  
+                </span></a>
+        </li>
+        <li>
+        <div class="flex">
+            <a
+        class="mr-2 svg-color-black-100 hover:svg-color-turquoise-100"
+        
+        href="http://www.facebook.com/LeasingMarkt"
+         rel="noreferrer noopener"         target="_blank"
+    ><svg  viewbox="0 0 33 34" width="33px" height="34px" fill="">
+    <use xlink:href="/res/v3/images/icons.svg?id=a29288d93520919961929917bb11808c#social-facebook"></use>
+</svg>
+                <div class="sr-only">Facebook</div></a>
+            <a
+        class="mr-2 svg-color-black-100 hover:svg-color-turquoise-100"
+        
+        href="https://www.instagram.com/leasingmarkt.de/"
+         rel="noreferrer noopener"         target="_blank"
+    ><svg  viewbox="0 0 33 34" width="33px" height="34px" fill="">
+    <use xlink:href="/res/v3/images/icons.svg?id=a29288d93520919961929917bb11808c#social-instagram"></use>
+</svg>
+                <div class="sr-only">Instagram</div></a>
+                            <a
+        class="mr-2 svg-color-black-100 hover:svg-color-turquoise-100"
+        
+        href="https://www.youtube.com/c/LeasingMarktde"
+         rel="noreferrer noopener"         target="_blank"
+    ><svg  viewbox="0 0 34 34" width="34px" height="34px" fill="">
+    <use xlink:href="/res/v3/images/icons.svg?id=a29288d93520919961929917bb11808c#social-youtube"></use>
+</svg>
+                    <div class="sr-only">YouTube</div></a>
+                        <a
+        class="mr-2 svg-color-black-100 hover:svg-color-turquoise-100" title="LinkedIn"
+        
+        href="https://www.linkedin.com/company/leasingmarkt/"
+         rel="noreferrer noopener"         target="_blank"
+    ><svg  viewbox="0 0 32 34" width="32px" height="34px" fill="">
+    <use xlink:href="/res/v3/images/icons.svg?id=a29288d93520919961929917bb11808c#social-linkedin"></use>
+</svg></a>
+                                        <a
+        class="mr-2 svg-color-black-100 hover:svg-color-turquoise-100"
+        
+        href="https://www.tiktok.com/@leasingmarkt.de/"
+         rel="noreferrer noopener"         target="_blank"
+    ><svg  viewbox="0 0 34 34" width="34px" height="34px" fill="">
+    <use xlink:href="/res/v3/images/icons.svg?id=a29288d93520919961929917bb11808c#social-tiktok"></use>
+</svg>
+                    <div class="sr-only">TikTok</div></a>
+                    </div>
+    </li>
+</ul>
+                                    </div>
+                                </div>
+                                <div class="flex container mx-auto px-3">
+                                    <p class="text-1 text-black-60 mt-4 mobile:hidden hidden desktop:hidden tablet:hidden laptop:hidden"
+                                       data-newsletter-tablet-collapsible-content>
+                                                                                Mit der Anmeldung zum Newsletter stimmen Sie zu, dass LeasingMarkt.de aus Ihrem Kauf- und Nutzungsverhalten personenbezogene Profile erstellt, um Werbe- und Webangebote besser auf Ihre persönlichen Interessen auszurichten. Die Einwilligung können Sie jederzeit widerrufen. Informationen dazu, wie LeasingMarkt.de mit Ihren Daten umgeht, finden Sie in unserer <a
+        title="Datenschutzerklärung"
+        
+        href="https://www.leasingmarkt.de/datenschutz"
+                target="_self"
+    ><span class="text-turquoise-100 newsletter-link">Datenschutzerklärung</span>.</a>
+ Eine Abmeldung vom Newsletter ist jederzeit möglich.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="footer__section py-3">
+                                <div class="flex items-center container mx-auto px-3">
+                                    <div>
+                                                                                    <img
+    src="https://www.leasingmarkt.de/res/images/lm/trust-logo_footer.png" alt="Sicherheit durch eKomi und SSL" class="mr-4 tablet:hidden desktop:block" title="Sicherheit durch eKomi und SSL" width="125" height="57" loading="lazy"
+>
+                                            <img
+    src="https://www.leasingmarkt.de/images/footer/ekomi.png" alt="Sicherheit durch eKomi und SSL" class="mr-4 laptop:hidden desktop:hidden" title="Sicherheit durch eKomi und SSL" width="54" height="54" loading="lazy"
+>
+                                                                            </div>
+                                                                            <div class="font-normal text-1-2 underline-link">
+    <span style="display: block;">Unsere Nutzer sind von LeasingMarkt.de überzeugt:</span>
+    <strong>4.7 von 5 Sternen</strong>, ermittelt aus 2.955 Bewertungen bei <a href="https://www.ekomi.de/bewertungen-leasingmarktde.html" target="_blank" rel="nofollow noopener">eKomi</a>.
+            <script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"Product","@id":"https:\/\/www.ekomi.de\/bewertungen-leasingmarktde.html","name":"LeasingMarkt.de","aggregateRating":{"@type":"AggregateRating","ratingValue":"4.7","reviewCount":"2955","bestRating":"5"}}</script>
+    </div>
+                                                                        <div class="ml-auto flex items-center tablet:flex-col tablet:items-baseline desktop:flex-row">
+                                        <img
+    src="https://www.leasingmarkt.de/res/v3/image/home/as24-leasingmarkt-endorsement.svg" alt="LeasingMarkt.de Logo" class="lm-logo desktop:mr-3 tablet:mb-2" title="LeasingMarkt.de Logo" width="195" height="22" loading="lazy"
+>
+                                        <a
+        class="as24-logo block ml-3"
+        
+        href="https://www.autoscout24.de/"
+         rel="noreferrer noopener"         target="_blank"
+    ><img
+    src="/images/logos/AutoScout24_horizontal_solid.svg" alt="As24 Logo" class="" title="As24 Logo" width="161" height="38" loading="lazy"
+></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hidden mobile:block">
+                            <div class="footer__section py-3 border-t border-black-50">
+                                <strong
+                                    class="flex items-center container mx-auto px-3">
+                                    <img
+    src="https://www.leasingmarkt.de/images/icons/as24-leasingmarkt.svg" alt="LeasingMarkt.de" class="lm-logo-icon mr-2 inline-block" title="LeasingMarkt.de" width="210" height="150" loading="lazy"
+>
+                                    LeasingMarkt.de: Die Nr. 1 für Auto-Leasing.
+                                </strong>
+                            </div>
+                            <div class="footer__section py-3 border-b border-black-50">
+                                <div class="px-3">
+                                    <div>
+                                        <div style="overflow-x:hidden;">
+                                            <div class="content_block">
+                                                <div class="border-b border-black-50 pb-2 pt-1" data-collapsible>
+        <div class="cursor-pointer flex items-center select-none" data-collapsible-toggle>
+            <svg data-collapsible-state-indicator="data-collapsible-state-indicator" class="block duration-300 transform transition-all" viewbox="0 0 16 16" width="16px" height="16px" fill="">
+    <use xlink:href="/res/v3/images/icons.svg?id=a29288d93520919961929917bb11808c#arrow-right"></use>
+</svg>
+            <strong class="block ">Unternehmen</strong>
+        </div>
+        <div class="duration-300 hidden h-0  overflow-y-hidden transition-all" data-collapsible-container>
+            <div data-collapsible-content>
+                <ul class="pt-2">
+                                                        <li class="ml-3 mb-2 text-1-2">
+                                                            <a
+        class="text-black-100"
+        
+        href="https://www.autoscout24.com/as24-career-pages/leasingmarkt-de/"
+         rel="noreferrer noopener"         target="_blank"
+    >Über LeasingMarkt.de</a>
+                                                        </li>
+                                                                                                                    <li class="ml-3 mb-2 text-1-2">
+                                                                <a
+        class="text-black-100"
+        
+        href="https://www.autoscout24.com/as24-career-pages/search-roles/?company=Leasingmarkt.de"
+         rel="noreferrer noopener"         target="_blank"
+    >Karriere
+                                                                    <span class="base-badge font-bold rounded px-1 bg-gradient-to-r to-turquoise-100 from-turquoise-120 indent-0 inline-block ml-1 text-1 text-white">Jetzt bewerben!</span></a>
+                                                            </li>
+                                                                                                                <li class="ml-3 mb-2 text-1-2">
+                                                            <a
+        class="text-black-100"
+        
+        href="https://www.leasingmarkt.de/partner"
+                target="_self"
+    >Für Händler</a>
+                                                        </li>
+                                                                                                                    <li class="ml-3 mb-2 text-1-2">
+                                                                <a
+        class="text-black-100"
+        
+        href="https://www.leasingmarkt.de/kooperation-mit-autoscout24"
+                target="_self"
+    >Kooperation mit AutoScout24</a>
+                                                            </li>
+                                                                                                                <li class="ml-3 mb-2 text-1-2">
+                                                            <a
+        class="text-black-100"
+        
+        href="https://www.leasingmarkt.de/allgemeine-geschaeftsbedingungen"
+                target="_self"
+    >AGB</a>
+                                                        </li>
+                                                        <li class="ml-3 mb-2 text-1-2">
+                                                            <a
+        class="text-black-100"
+        
+        href="https://www.leasingmarkt.de/datenschutz"
+                target="_self"
+    >Datenschutz</a>
+                                                        </li>
+                                                                                                                    <li class="ml-3 mb-2 text-1-2">
+                                                                <a
+        class="text-black-100"
+        
+        href="https://www.leasingmarkt.de/impressum"
+                target="_self"
+    >Impressum</a>
+                                                            </li>
+                                                                                                                                                                            <li class="ml-3 mb-2 text-1-2">
+                                                                <a
+        class="text-black-100"
+        
+        href="https://www.leasingmarkt.de/presse"
+                target="_self"
+    >Presse</a>
+                                                            </li>
+                                                                                                            </ul>
+            </div>
+        </div>
+    </div>
+
+                                                <div class="border-b border-black-50 pb-2 pt-1" data-collapsible>
+        <div class="cursor-pointer flex items-center select-none" data-collapsible-toggle>
+            <svg data-collapsible-state-indicator="data-collapsible-state-indicator" class="block duration-300 transform transition-all" viewbox="0 0 16 16" width="16px" height="16px" fill="">
+    <use xlink:href="/res/v3/images/icons.svg?id=a29288d93520919961929917bb11808c#arrow-right"></use>
+</svg>
+            <strong class="block ">Service</strong>
+        </div>
+        <div class="duration-300 hidden h-0  overflow-y-hidden transition-all" data-collapsible-container>
+            <div data-collapsible-content>
+                <ul class="pt-2">
+                                                        <li class="ml-3 mb-2 text-1-2">
+                                                            <a
+        class="text-black-100"
+        
+        href="https://www.leasingmarkt.de/kontakt"
+                target="_self"
+    >Kontakt</a>
+                                                        </li>
+                                                        <li class="ml-3 mb-2 text-1-2">
+                                                            <a
+        class="text-black-100"
+        
+        href="https://www.leasingmarkt.de/ratgeber"
+                target="_self"
+    >Ratgeber</a>
+                                                        </li>
+                                                                                                                    <li class="ml-3 mb-2 text-1-2">
+                                                                <a
+        class="text-black-100"
+        
+        href="https://www.leasingmarkt.de/magazin"
+                target="_self"
+    >Magazin</a>
+                                                            </li>
+                                                                                                                                                                        <li class="ml-3 mb-2 text-1-2"><a
+                                                                onclick="window.__tcfapi && window.__tcfapi('showConsentManager', 2, () => null)"
+                                                                class="text-black-100"
+                                                                href="javascript:void(0);">Privacy Settings</a>
+                                                        </li>
+                                                                                                                    <li class="ml-3 mb-2 text-1-2">
+                                                                <a
+        class="text-black-100"
+        
+        href="https://www.leasingmarkt.de/newsletter"
+                target="_self"
+    >Newsletter</a>
+                                                            </li>
+                                                                                                                <li class="ml-3 mb-2 text-1-2">
+                                                            <a
+        class="text-black-100"
+        
+        href="https://www.leasingmarkt.de/ratgeber/faq"
+                target="_self"
+    >Häufig gestellte Fragen</a>
+                                                        </li>
+                                                                                                                    <li class="ml-3 mb-2 text-1-2">
+                                                                <a
+        class="text-black-100"
+        
+        href="https://www.leasingmarkt.de/so-funktioniert-leasingmarkt"
+                target="_self"
+    >So funktioniert&#039;s</a>
+                                                            </li>
+                                                                                                                <li class="ml-3 mb-2 text-1-2">
+                                                            <a
+        class="text-black-100"
+        
+        href="https://www.leasingmarkt.de/ratgeber/leasing-lexikon"
+                target="_self"
+    >Leasing-Lexikon</a>
+                                                        </li>
+                                                                                                                    <li class="ml-3 mb-2 text-1-2">
+                                                                <a
+        class="text-black-100"
+        
+        href="https://autoscout24-media.com/"
+         rel="noreferrer noopener"         target="_self"
+    >Werben auf LeasingMarkt.de</a>
+                                                            </li>
+                                                            <li><a href="https://autoscout24-media.com/"
+                                                                   rel="noreferrer noopener nofollow"
+                                                                   target="_blank"></a></li>
+                                                                                                            </ul>
+            </div>
+        </div>
+    </div>
+                                                <div class="pb-2 pt-1" data-collapsible>
+        <div class="cursor-pointer flex items-center select-none" data-collapsible-toggle>
+            <svg data-collapsible-state-indicator="data-collapsible-state-indicator" class="block duration-300 transform transition-all" viewbox="0 0 16 16" width="16px" height="16px" fill="">
+    <use xlink:href="/res/v3/images/icons.svg?id=a29288d93520919961929917bb11808c#arrow-right"></use>
+</svg>
+            <strong class="block ">Top-Kategorien</strong>
+        </div>
+        <div class="duration-300 hidden h-0  overflow-y-hidden transition-all" data-collapsible-container>
+            <div data-collapsible-content>
+                <ul class="pt-2">
+
+                                                            <li class="ml-3 mb-2 text-1-2">
+                                                                <a
+        class="text-black-100"
+        
+        href="https://www.leasingmarkt.de/deals"
+                target="_self"
+    >Leasing Deals</a>
+                                                            </li>
+
+                                                                                                                    <li class="ml-3 mb-2 text-1-2">
+                                                                <a
+        class="text-black-100"
+        
+        href="https://www.leasingmarkt.de/gebrauchtwagen"
+                target="_self"
+    >Gebrauchtwagen Leasing</a>
+                                                            </li>
+                                                                                                                                                                            <li class="ml-3 mb-2 text-1-2">
+                                                                <a
+        class="text-black-100"
+        
+        href="https://www.leasingmarkt.de/leasing-ohne-anzahlung"
+                target="_self"
+    >Leasing ohne Anzahlung</a>
+                                                            </li>
+                                                                                                                <li class="ml-3 mb-2 text-1-2">
+                                                            <a
+        class="text-black-100"
+        
+        href="https://www.leasingmarkt.de/e-auto"
+                target="_self"
+    >E-Auto Leasing</a>
+                                                        </li>
+                                                        <li class="ml-3 mb-2 text-1-2">
+                                                            <a
+        class="text-black-100"
+        
+        href="https://www.leasingmarkt.de/privatleasing"
+                target="_self"
+    >Privatleasing</a>
+                                                        </li>
+                                                                                                                    <li class="ml-3 mb-2 text-1-2">
+                                                                <a
+        class="text-black-100"
+        
+        href="https://www.leasingmarkt.de/leasing-vergleiche"
+                target="_self"
+    >Leasing-Vergleiche</a>
+                                                            </li>
+                                                                                                                <li class="ml-3 mb-2 text-1-2">
+                                                            <a
+        class="text-black-100"
+        
+        href="https://www.leasingmarkt.de/hersteller"
+                target="_self"
+    >Herstellerverzeichnis</a>
+                                                        </li>
+                                                        <li class="ml-3 mb-2 text-1-2">
+                                                            <a
+        class="text-black-100"
+        
+        href="https://www.leasingmarkt.de/haendler"
+                target="_self"
+    >Händlerverzeichnis</a>
+                                                        </li>
+                                                                                                                    <li class="ml-3 mb-2 text-1-2">
+                                                                <a
+        class="text-black-100"
+        
+        href="https://www.leasingmarkt.de/region"
+                target="_self"
+    >Autoleasing in der Nähe</a>
+                                                            </li>
+                                                                                                            </ul>
+            </div>
+        </div>
+    </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="footer__section py-3 border-b border-black-50" data-newsletter-collapsible>
+                                <div class="px-3">
+                                    <ul>
+    <li class="mb-2 mobile:mb-4 text-2"><strong>In Verbindung bleiben</strong></li>
+    <li class="mb-2 mobile:mb-4 text-1-2">
+        <span class="mobile:hidden block">
+            Erhalten Sie die neuesten Leasing-Angebote und weitere Services zum Thema Leasing von uns und den mit LeasingMarkt.de verbundenen Unternehmen kostenlos per E-Mail.
+            
+        </span>
+        <span class="mobile:block hidden">Erhalten Sie die neuesten <strong>Leasing-Angebote</strong> und weitere Services zum Thema Leasing von uns und den mit LeasingMarkt.de verbundenen Unternehmen, kostenlos per E-Mail.</span>
+    </li>
+    <li class="mb-2 mobile:mb-4">
+                                    <form
+            action="https://www.leasingmarkt.de/newsletter"
+            method="post" name="mc-embedded-subscribe-form" class="validate nobottommargin" data-ga4-parameters="">
+            <input type="hidden" name="_token" value="GISESzd0JIZIwpxFjLnAOj0smDkGHANWk7f9A4v8" autocomplete="off">            <input type="hidden" name="source" value="Footer">
+            <div id="mc_embed_signup_scroll" class="flex tablet:inline-flex">
+                <label class="flex rounded h-5 mobile:h-6 tablet:h-6 overflow-hidden border border-black-50 w-full" data-newsletter-collapsible-toggle="data-newsletter-collapsible-toggle" title="E-Mail">
+    <input class="h-full outline-none px-2 text-black-100 w-full " name="email" type="email" value=""
+            placeholder="E-Mail-Adresse">
+</label>
+                <div id="mce-responses" class="clear">
+                    <div class="response" id="mce-error-response" style="display:none"></div>
+                    <div class="response" id="mce-success-response" style="display:none"></div>
+                </div>
+                <div class="inline-block">
+                    <button class="px-3 rounded text-2 font-semibold flex  items-center justify-around h-5 mobile:h-6 mobile:w-full tablet:h-6 tablet:w-full atom-button-primary rounded-full lm-button  px-3 rounded text-1-2 font-semibold inline-flex items-center justify-around h-5 mobile:h-6 mobile:w-full tablet:h-6 tablet:w-full flex-none ml-2 rounded-none" value="Subscribe" name="subscribe" >Absenden</button>
+                </div>
+            </div>
+                        <p class="text-1 text-black-60 pt-4 mobile:hidden hidden " data-newsletter-collapsible-content >
+                Mit der Anmeldung zum Newsletter stimmen Sie zu, dass LeasingMarkt.de aus Ihrem Kauf- und Nutzungsverhalten personenbezogene Profile erstellt, um Werbe- und Webangebote besser auf Ihre persönlichen Interessen auszurichten. Die Einwilligung können Sie jederzeit widerrufen. Informationen dazu, wie LeasingMarkt.de mit Ihren Daten umgeht, finden Sie in unserer <a
+        title="Datenschutzerklärung"
+        
+        href="https://www.leasingmarkt.de/datenschutz"
+                target="_self"
+    ><span class="text-turquoise-100 newsletter-link">Datenschutzerklärung</span>.</a>
+ Eine Abmeldung vom Newsletter ist jederzeit möglich.
+            </p>
+            <p class="text-1 text-black-60 mt-4 mobile:hidden hidden desktop:hidden tablet:hidden laptop:hidden" data-newsletter-mobile-collapsible-content >
+                Mit der Anmeldung zum Newsletter stimmen Sie zu, dass LeasingMarkt.de aus Ihrem Kauf- und Nutzungsverhalten personenbezogene Profile erstellt, um Werbe- und Webangebote besser auf Ihre persönlichen Interessen auszurichten. Die Einwilligung können Sie jederzeit widerrufen. Informationen dazu, wie LeasingMarkt.de mit Ihren Daten umgeht, finden Sie in unserer <a
+        title="Datenschutzerklärung"
+        
+        href="https://www.leasingmarkt.de/datenschutz"
+                target="_self"
+    ><span class="text-turquoise-100 newsletter-link">Datenschutzerklärung</span>.</a>
+ Eine Abmeldung vom Newsletter ist jederzeit möglich.
+            </p>
+        </form>
+    </li>
+</ul>
+                                    <ul data-newsletter-hideble-collapsible-content>
+            <li class="mb-2 mobile:mb-4 text-1-2">
+            <a
+        class="app-logo text-black-100 svg-color-black-100 text-turquoise-100 svg-color-turquoise-100 mobile:mb-4"
+        
+        href="https://itunes.apple.com/de/app/leasingmarkt-de-auto-leasing-angebote-suche/id1261336827?mt=8"
+         rel="noreferrer noopener"         target="_blank"
+    ><span class="flex items-center">
+                    <svg class="mb-1-2 mr-2" viewbox="0 0 11 14" width="11px" height="14px" fill="">
+    <use xlink:href="/res/v3/images/icons.svg?id=a29288d93520919961929917bb11808c#os-ios"></use>
+</svg>
+                    LeasingMarkt.de für iOS 
+                </span></a>
+        </li>
+        <li class="mb-4 text-1-2">
+            <a
+        class="app-logo text-black-100 svg-color-black-100 text-turquoise-100 svg-color-turquoise-100 mobile:mb-4"
+        
+        href="https://play.google.com/store/apps/details?id=de.leasingmarkt.app"
+         rel="noreferrer noopener"         target="_blank"
+    ><span class="flex items-center">
+                    <svg class="mb-1-2 mr-2" viewbox="0 0 11 14" width="11px" height="14px" fill="">
+    <use xlink:href="/res/v3/images/icons.svg?id=a29288d93520919961929917bb11808c#os-android"></use>
+</svg>
+                    LeasingMarkt.de für Android  
+                </span></a>
+        </li>
+        <li>
+        <div class="flex">
+            <a
+        class="mr-2 svg-color-black-100 hover:svg-color-turquoise-100"
+        
+        href="http://www.facebook.com/LeasingMarkt"
+         rel="noreferrer noopener"         target="_blank"
+    ><svg  viewbox="0 0 33 34" width="33px" height="34px" fill="">
+    <use xlink:href="/res/v3/images/icons.svg?id=a29288d93520919961929917bb11808c#social-facebook"></use>
+</svg>
+                <div class="sr-only">Facebook</div></a>
+            <a
+        class="mr-2 svg-color-black-100 hover:svg-color-turquoise-100"
+        
+        href="https://www.instagram.com/leasingmarkt.de/"
+         rel="noreferrer noopener"         target="_blank"
+    ><svg  viewbox="0 0 33 34" width="33px" height="34px" fill="">
+    <use xlink:href="/res/v3/images/icons.svg?id=a29288d93520919961929917bb11808c#social-instagram"></use>
+</svg>
+                <div class="sr-only">Instagram</div></a>
+                            <a
+        class="mr-2 svg-color-black-100 hover:svg-color-turquoise-100"
+        
+        href="https://www.youtube.com/c/LeasingMarktde"
+         rel="noreferrer noopener"         target="_blank"
+    ><svg  viewbox="0 0 34 34" width="34px" height="34px" fill="">
+    <use xlink:href="/res/v3/images/icons.svg?id=a29288d93520919961929917bb11808c#social-youtube"></use>
+</svg>
+                    <div class="sr-only">YouTube</div></a>
+                        <a
+        class="mr-2 svg-color-black-100 hover:svg-color-turquoise-100" title="LinkedIn"
+        
+        href="https://www.linkedin.com/company/leasingmarkt/"
+         rel="noreferrer noopener"         target="_blank"
+    ><svg  viewbox="0 0 32 34" width="32px" height="34px" fill="">
+    <use xlink:href="/res/v3/images/icons.svg?id=a29288d93520919961929917bb11808c#social-linkedin"></use>
+</svg></a>
+                                        <a
+        class="mr-2 svg-color-black-100 hover:svg-color-turquoise-100"
+        
+        href="https://www.tiktok.com/@leasingmarkt.de/"
+         rel="noreferrer noopener"         target="_blank"
+    ><svg  viewbox="0 0 34 34" width="34px" height="34px" fill="">
+    <use xlink:href="/res/v3/images/icons.svg?id=a29288d93520919961929917bb11808c#social-tiktok"></use>
+</svg>
+                    <div class="sr-only">TikTok</div></a>
+                    </div>
+    </li>
+</ul>
+                                </div>
+                            </div>
+                            <div class="footer__section py-3">
+                                <div class="px-3 pb-3">
+                                    <div class="flex items-center mb-3">
+                                        <div>
+                                                                                            <img
+    src="https://www.leasingmarkt.de/images/footer/ekomi@2x.png" alt="Sicherheit durch eKomi und SSL" class="ekomi-logo footer-trust w-8" title="Sicherheit durch eKomi und SSL" width="108" height="108" loading="lazy"
+>
+                                                                                    </div>
+                                        <div class="ml-3">
+                                            <div class="distance10 hidden-lg hidden-md hidden-xs"></div>
+                                                                                            <div class="font-normal text-1-2 underline-link">
+    <span style="display: block;">Unsere Nutzer sind von LeasingMarkt.de überzeugt:</span>
+    <strong>4.7 von 5 Sternen</strong>, ermittelt aus 2.955 Bewertungen bei <a href="https://www.ekomi.de/bewertungen-leasingmarktde.html" target="_blank" rel="nofollow noopener">eKomi</a>.
+    </div>
+                                                                                    </div>
+                                    </div>
+                                </div>
+                                <div class="px-3 pb-3">
+                                    <div class="flex items-center">
+                                        <img
+    src="https://www.leasingmarkt.de/res/v3/image/home/as24-leasingmarkt-endorsement.svg" alt="LeasingMarkt.de Logo" class="lm-logo" title="LeasingMarkt.de Logo" width="168" height="20" loading="lazy"
+>
+                                        <a
+        class="as24-logo block ml-3"
+        
+        href="https://www.autoscout24.de/"
+         rel="noreferrer noopener"         target="_blank"
+    ><img
+    src="/images/logos/AutoScout24_horizontal_solid.svg" alt="As24 Logo" class="" title="As24 Logo" width="129" height="31" loading="lazy"
+></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+            </main>
+
+            <div class="modal hidden" id="modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="mobile:hidden" style="height:60px"></div>       <!-- no top extra space on iphone -->
+    <div class="modal-dialog modal-inquiry" style="padding-top:0px;">
+        <div class="modal-content"></div>
+    </div>
+</div>
+
+<div id="hidden-on-mobile-device" class="hidden-xs"></div>  <!-- detect mobile devices -->
+
+<div id="gotoTop" class="icon-angle-up"></div>
+
+    
+<div class="fixed flex flex-col left-0 mt-6 pointer-events-none right-0 space-y-1 top-0 z-50" data-notifications></div>
+        </div>
+
+        <div data-scroll-top-button class="fixed transition duration-200 ease-in-out rounded right-2 bg-black-70 hover:bg-red-120 opacity-0 w-6 h-6 z-50 pointer-events-none" style="bottom: 100px">
+    <svg class="text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  <path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd"/>
+</svg></div>
+
+        <!--
+    env: prod
+sid: s0
+-->
+
+    <script src="/vendor/livewire/livewire.js?id=90730a3b0e7144480175" data-turbo-eval="false" data-turbolinks-eval="false" ></script><script data-turbo-eval="false" data-turbolinks-eval="false" >window.livewire = new Livewire();window.Livewire = window.livewire;window.livewire_app_url = '';window.livewire_token = 'GISESzd0JIZIwpxFjLnAOj0smDkGHANWk7f9A4v8';window.deferLoadingAlpine = function (callback) {window.addEventListener('livewire:load', function () {callback();});};let started = false;window.addEventListener('alpine:initializing', function () {if (! started) {window.livewire.start();started = true;}});document.addEventListener("DOMContentLoaded", function () {if (! started) {window.livewire.start();started = true;}});</script>
+
+
+<script type="text/javascript">
+    window.__LM__ ??= {};
+    window.__LM__.ga4 ??= {};
+    window.__LM__.gtm ??= {};
+    window.__LM__.ga4.common = JSON.parse("{\"configGa4\":{\"isProduction\":true,\"ga4Id\":\"G-PKB2KQ0F23\",\"debugButton\":false,\"debugModeOn\":false},\"user\":{\"user_internalId\":null,\"user_hasFavorites\":\"no\"},\"system\":{\"system_timezone\":\"Europe\\\/Berlin\",\"system_currency\":\"EUR\"},\"campaign\":{\"internal_campaigns\":\"no_campaign\"}}");
+    window.__LM__.gtm.config = JSON.parse("{\"id\":\"GTM-5WXNB3D\"}");
+</script>
+
+
+<script type="text/javascript">
+    window.__LM__ ??= {};
+    window.__LM__.ga4 ??= {};
+    window.__LM__.ga4.dynamicEvents = {};
+    window.__LM__.ga4.dynamicEvents = JSON.parse("[]");
+</script>
+
+<script type="text/javascript">
+    window.__LM__ ??= {};
+    window.__LM__.ga4 ??= {};
+    </script>
+
+
+
+<script type="text/javascript" src="/res/v3/js/app.js?id=181a84ac8a08ae696f013878ffe0c2a6"></script>
+<script type="text/javascript" src="/res/v3/js/banner.js?id=4276ae13ab266b645cc07331f8f39f8e"></script>
+    <script type="text/plain">
+        
+    </script>
+    <script type="text/javascript" src="/res/v3/js/input/password-input.js?id=6c2c0edbf3f380be62e31b16a9302229"></script>
+
+        
+        <!-- start tracking -->
+<!-- end tracking -->
+            </body>
+</html>

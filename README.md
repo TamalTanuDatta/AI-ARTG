@@ -56,7 +56,7 @@ npx playwright install
 
 ### Starting the Server
 ```bash
-python3 -m uvicorn main:app --reload
+python3.9 -m uvicorn main:app --reload
 ```
 
 ### Generating Tests
