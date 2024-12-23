@@ -6,7 +6,7 @@ from pathlib import Path
 from bs4 import BeautifulSoup
 import html5lib
 import json
-from ml_model import CookieBannerAnalyzer
+from html_analyzer_model import CookieBannerAnalyzer
 import subprocess
 import re
 import requests

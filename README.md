@@ -91,8 +91,8 @@ npx playwright test --browser=chromium,firefox,webkit
 
 ```
 AI-ARTG/
-├── main.py              # FastAPI server and test generation logic
-├── ml_model.py          # ML model for HTML analysis and pattern recognition
+├── TestCreator.py        # FastAPI server and test generation logic
+├── html_analyzer_model.py # ML model for HTML analysis and pattern recognition
 ├── static/              # Generated test files and assets
 │   └── tests/           # Test files organized by domain and timestamp
 ├── uploads/             # Temporary storage for uploaded HTML files
