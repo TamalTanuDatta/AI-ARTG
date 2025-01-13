@@ -686,6 +686,21 @@ def generate_test_file(test_cases, html_content, input_url=None):
     links = soup.find_all('a', href=True)
     form_elements = detect_form_elements(soup)
     
+    # Get page title
+    title_tag = soup.find('title')
+    page_title = title_tag.string if title_tag else None
+    if not page_title:
+        h1_tag = soup.find('h1')
+        page_title = h1_tag.string if h1_tag else None
+    
+    # If no title found, create one from URL
+    if not page_title:
+        page_title = url.split('/')[-1].replace('-', ' ').title() + ' Page'
+    else:
+        page_title = page_title.strip()
+        if not page_title.lower().endswith(('test', 'tests', 'page')):
+            page_title += ' Page Test'
+    
     # Start with imports and test configuration
     lines = [
         'import { test, expect } from "@playwright/test";',
@@ -718,7 +733,7 @@ def generate_test_file(test_cases, html_content, input_url=None):
         '  await page.waitForLoadState("networkidle");',
         '});',
         "",
-        'test.describe("Link Validation Tests", () => {',
+        f'test.describe("{page_title}", () => {{',
         f'  const BASE_URL = "{url}";',
         ""
     ]
@@ -858,7 +873,21 @@ async def save_html_from_url(url: str) -> tuple[str, str]:
         headers = {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
         }
-        response = requests.get(url, headers=headers, timeout=10)
+        
+        # Check if URL is local development
+        parsed_url = urlparse(url)
+        is_local = (
+            parsed_url.hostname in ['localhost', '127.0.0.1'] or
+            (parsed_url.hostname and parsed_url.hostname.endswith('.dev'))
+        )
+        
+        # Make request with SSL verification disabled for local development
+        response = requests.get(
+            url, 
+            headers=headers, 
+            timeout=10,
+            verify=not is_local  # Disable SSL verification for local development URLs
+        )
         response.raise_for_status()
         
         # Get HTML content
