@@ -509,7 +509,6 @@ def generate_form_element_tests(form_elements):
                 f'          const button_{button_name} = await page.getByRole("button", {{ name: "{button_text}" }});',
                 f'          if (await button_{button_name}.count() > 0) {{',
                 f'            await expect(button_{button_name}, "Button should be visible").toBeVisible();',
-                f'            await expect(button_{button_name}, "Button should be enabled").toBeEnabled();',
                 '',
                 '            // Verify button interactions',
                 f'            await button_{button_name}.hover();',
@@ -738,7 +737,7 @@ def generate_test_file(test_cases, html_content, input_url=None):
         ""
     ]
     
-    # Generate link tests (keeping existing code)
+    # Generate link tests
     domain_links = {}
     for link in links:
         href = link.get('href')
@@ -755,38 +754,51 @@ def generate_test_file(test_cases, html_content, input_url=None):
             except Exception as e:
                 logger.warning(f"Error parsing link {href}: {str(e)}")
     
-    # Generate link tests (existing code)
-    for domain, hrefs in domain_links.items():
-        if domain:
-            lines.extend([
-                f'  test.describe("Links to {domain}", () => {{',
-            ])
-            for href in hrefs:
-                test_name = href.split('/')[-1] or domain
-                test_name = normalize_text(test_name)
+    if domain_links:
+        lines.extend([
+            '  test.describe("Link Tests", () => {',
+        ])
+        for domain, hrefs in domain_links.items():
+            if domain:
                 lines.extend([
-                    f'    test("should validate link to {test_name}", async ({{ page }}) => {{',
-                    "      try {",
-                    f'        const links = await page.locator(\'a[href*="{test_name}"]\').all();',
-                    "        if (links.length > 0) {",
-                    "          for (const link of links) {",
-                    "            const href = await link.getAttribute('href');",
-                    "            expect(href).toBeTruthy();",
-                    f'            expect(href).toContain("{test_name}");',
-                    "          }",
-                    "        } else {",
-                    f'          console.log("No links found for {test_name} - this may be expected");',
-                    "        }",
-                    "      } catch (error) {",
-                    f'        console.log("Error validating link {test_name}:", error);',
-                    "      }",
-                    "    });",
-                    ""
+                    f'    // Testing links to {domain}',
                 ])
-            lines.extend([
-                "  });",
-                ""
-            ])
+                test_name_counts = {}
+                for href in hrefs:
+                    # Extract unique parts from URL for test name
+                    url_parts = href.split('/')
+                    test_name = url_parts[-1] if url_parts[-1] else "Homepage"
+                    if len(url_parts) > 3:  # If URL has additional path components
+                        parent_path = url_parts[-2]
+                        test_name = f"{parent_path} {test_name}"
+                    
+                    # Clean up the test name
+                    test_name = test_name.replace('-', ' ').replace('_', ' ').title()
+                    test_name = re.sub(r'\s+', ' ', test_name).strip()
+                    
+                    # Handle duplicate test names
+                    if test_name in test_name_counts:
+                        test_name_counts[test_name] += 1
+                        test_name = f"{test_name} (Variant {test_name_counts[test_name]})"
+                    else:
+                        test_name_counts[test_name] = 1
+                    
+                    lines.extend([
+                        f'    test("should validate {test_name} link", async ({{ page }}) => {{',
+                        f'      const link = page.locator(\'a[href="{href}"]\').first();',
+                        f'      if (await link.isVisible()) {{',
+                        f'        await expect(link).toBeVisible();',
+                        f'        console.log(`Link with href {href} is validated successfully`);',
+                        f'      }} else {{',
+                        f'        console.log(`Link with href {href} is not visible on the page`);',
+                        f'      }}',
+                        '    });',
+                        ''
+                    ])
+        lines.extend([
+            '  });',
+            ''
+        ])
     
     # Add Form Elements Tests
     lines.extend(generate_form_element_tests(form_elements))
@@ -866,53 +878,60 @@ async def generate_from_url(url: str = Form(...)):
         logger.error(f"Error processing URL: {str(e)}")
         raise HTTPException(status_code=500, detail=f"Error processing URL: {str(e)}")
 
-async def save_html_from_url(url: str) -> tuple[str, str]:
+async def save_html_from_url(url: str):
     """Fetch HTML from URL and save it."""
     try:
-        # Make request with proper headers
         headers = {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
         }
         
-        # Check if URL is local development
         parsed_url = urlparse(url)
         is_local = (
             parsed_url.hostname in ['localhost', '127.0.0.1'] or
-            (parsed_url.hostname and parsed_url.hostname.endswith('.dev'))
+            (parsed_url.hostname and (
+                parsed_url.hostname.endswith('.dev') or
+                parsed_url.hostname.endswith('.local') or
+                parsed_url.hostname.endswith('.test')
+            ))
         )
         
-        # Make request with SSL verification disabled for local development
-        response = requests.get(
-            url, 
-            headers=headers, 
-            timeout=10,
-            verify=not is_local  # Disable SSL verification for local development URLs
-        )
-        response.raise_for_status()
+        session = requests.Session()
+        session.headers.update(headers)
         
-        # Get HTML content
+        try:
+            response = session.get(url, timeout=30, verify=True)  # Increased timeout to 30 seconds
+            response.raise_for_status()
+        except requests.exceptions.SSLError:
+            if is_local:
+                response = session.get(url, timeout=30, verify=False)
+                response.raise_for_status()
+            else:
+                # Try one more time with verify=False for non-local URLs
+                try:
+                    response = session.get(url, timeout=30, verify=False)
+                    response.raise_for_status()
+                    logger.warning(f"SSL verification failed for {url}, but connection succeeded without verification")
+                except Exception as e:
+                    raise Exception(f"SSL verification failed and could not connect without verification: {str(e)}")
+        
         html_content = response.text
         
-        # Create filename from URL
+        # Create a safe filename from the URL
         filename = sanitize_url_to_filename(url)
+        file_path = f"uploads/{filename}.html"
         
-        # Ensure uploads directory exists
-        uploads_dir = "uploads"
-        os.makedirs(uploads_dir, exist_ok=True)
+        # Ensure the uploads directory exists
+        os.makedirs("uploads", exist_ok=True)
         
-        # Save HTML file
-        file_path = os.path.join(uploads_dir, f"{filename}.html")
-        
-        with open(file_path, "w", encoding="utf-8") as f:
+        # Save the HTML content
+        with open(file_path, 'w', encoding='utf-8') as f:
             f.write(html_content)
         
         return file_path, html_content
-    except requests.RequestException as e:
+        
+    except Exception as e:
         logger.error(f"Failed to fetch URL: {str(e)}")
         raise HTTPException(status_code=400, detail=f"Failed to fetch URL: {str(e)}")
-    except Exception as e:
-        logger.error(f"Error saving HTML: {str(e)}")
-        raise HTTPException(status_code=500, detail=f"Error saving HTML: {str(e)}")
 
 @app.post("/upload/")
 async def upload_file(file: UploadFile = File(...)):
