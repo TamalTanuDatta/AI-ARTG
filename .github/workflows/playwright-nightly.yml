@@ -31,13 +31,17 @@ jobs:
           PLAYWRIGHT_HEADLESS: true
         run: npx playwright test HomepageTest.spec.ts RegistrationPageTest.spec.ts
         
+      - name: List test results
+        if: always()
+        run: ls -la test-results/custom-report/
+        
       - name: Upload test results
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: test-report
           path: test-results/custom-report/
-
+        
   deploy:
     needs: test
     environment:
@@ -50,13 +54,16 @@ jobs:
         with:
           name: test-report
           
+      - name: List files
+        run: ls -la
+          
       - name: Setup Pages
         uses: actions/configure-pages@v4
         
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'custom-report'
+          path: '.'
           
       - name: Deploy to GitHub Pages
         id: deployment
