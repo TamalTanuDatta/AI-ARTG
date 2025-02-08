@@ -27,7 +27,9 @@ jobs:
           npx playwright install --with-deps
           
       - name: Run Playwright tests
-        run: npx playwright test RegistrationPageTest.spec.ts --headed=false
+        env:
+          PLAYWRIGHT_HEADLESS: true
+        run: npx playwright test RegistrationPageTest.spec.ts
         
       - name: Upload test results
         if: always()
