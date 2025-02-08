@@ -10,11 +10,7 @@ export default defineConfig({
   fullyParallel: true,
   retries: 0,
   workers: undefined,
-  reporter: [
-    ['html'],
-    ['list'],
-    ['./custom-reporter.ts']
-  ],
+  reporter: [['./custom-reporter.ts']],
   use: {
     baseURL: 'file://',
     actionTimeout: 5000,
