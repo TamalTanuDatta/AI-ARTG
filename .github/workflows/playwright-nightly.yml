@@ -31,6 +31,12 @@ jobs:
           PLAYWRIGHT_HEADLESS: true
         run: npx playwright test RegistrationPageTest.spec.ts
         
+      - name: Merge reports
+        if: always()
+        run: |
+          mkdir -p playwright-report
+          cp -r test-results/custom-report/* playwright-report/
+          
       - name: Upload test results
         if: always()
         uses: actions/upload-artifact@v4

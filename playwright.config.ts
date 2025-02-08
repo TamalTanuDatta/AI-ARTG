@@ -1,4 +1,5 @@
 import { defineConfig, devices } from '@playwright/test';
+import CustomHTMLReporter from './custom-reporter';
 
 export default defineConfig({
   testDir: './static',
@@ -9,7 +10,11 @@ export default defineConfig({
   fullyParallel: true,
   retries: 0,
   workers: undefined,
-  reporter: [['html'], ['list']],
+  reporter: [
+    ['html'],
+    ['list'],
+    ['./custom-reporter.ts']
+  ],
   use: {
     baseURL: 'file://',
     actionTimeout: 5000,
