@@ -26,6 +26,11 @@ jobs:
           npm ci
           npx playwright install --with-deps
           
+      - name: Clean old reports
+        run: |
+          rm -rf test-results/custom-report/
+          rm -rf playwright-report/
+          
       - name: Run Playwright tests
         env:
           PLAYWRIGHT_HEADLESS: true
@@ -49,6 +54,10 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
+      - name: Clean deployment directory
+        run: |
+          rm -rf ./*
+          
       - name: Download test results
         uses: actions/download-artifact@v4
         with:
