@@ -29,7 +29,7 @@ jobs:
       - name: Install dependencies
         run: |
           npm ci
-          npm install --save-dev typescript @types/node @playwright/test
+          npm install --save-dev typescript @types/node @playwright/test ts-node
           
       - name: Build TypeScript
         run: |

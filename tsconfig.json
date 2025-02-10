@@ -7,12 +7,17 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "types": ["@playwright/test"],
+    "types": ["node", "@playwright/test"],
     "resolveJsonModule": true,
     "moduleResolution": "node",
     "baseUrl": ".",
     "paths": {
       "*": ["*"]
+    }
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs"
     }
   },
   "include": ["**/*.ts"],
