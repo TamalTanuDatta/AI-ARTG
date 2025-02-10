@@ -29,6 +29,12 @@ jobs:
       - name: Install dependencies
         run: |
           npm ci
+          npm install -g typescript
+          
+      - name: Build TypeScript
+        run: |
+          tsc -v
+          tsc --noEmit
           
       - name: Clean old reports
         run: |
@@ -41,7 +47,7 @@ jobs:
           DEBUG: pw:api
         run: |
           ls -la static/
-          npx playwright test HomepageTest.spec.ts RegistrationPageTest.spec.ts --debug
+          npx playwright test static/HomepageTest.spec.ts static/RegistrationPageTest.spec.ts --debug
         
       - name: List test results
         if: always()
