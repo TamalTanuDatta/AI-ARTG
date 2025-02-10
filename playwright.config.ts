@@ -1,22 +1,20 @@
 import { defineConfig, devices } from '@playwright/test';
+import CustomHTMLReporter from './custom-reporter';
 
 export default defineConfig({
   testDir: './tests',
-  testMatch: '**/*.spec.ts',
-  timeout: 120000,
-  expect: { timeout: 15000 },
+  timeout: 30000,
+  expect: { timeout: 5000 },
   fullyParallel: false,
-  retries: 3,
   workers: 1,
+  retries: 0,
   reporter: [['./custom-reporter.ts']],
   use: {
-    baseURL: 'https://www.leasingmarkt.de',
-    actionTimeout: 20000,
-    navigationTimeout: 45000,
-    trace: 'retain-on-failure',
-    screenshot: 'only-on-failure',
-    video: 'retain-on-failure',
-    ignoreHTTPSErrors: true
+    actionTimeout: 10000,
+    navigationTimeout: 20000,
+    trace: 'on',
+    screenshot: 'on',
+    headless: true
   },
   projects: [
     {
@@ -24,11 +22,7 @@ export default defineConfig({
       use: { 
         ...devices['Desktop Chrome'],
         launchOptions: {
-          args: [
-            '--disable-dev-shm-usage',
-            '--no-sandbox',
-            '--disable-setuid-sandbox'
-          ]
+          args: ['--no-sandbox']
         }
       },
     },
