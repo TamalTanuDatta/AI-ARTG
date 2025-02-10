@@ -13,7 +13,18 @@ jobs:
   test:
     name: Run Playwright Tests
     runs-on: ubuntu-latest
+    container:
+      image: amazonlinux:2
+      
     steps:
+      - name: Install system dependencies
+        run: |
+          yum update -y
+          yum groupinstall -y "Development Tools"
+          yum install -y nodejs npm git
+          # Install browser dependencies
+          yum install -y xorg-x11-server-Xvfb gtk3 alsa-lib libdrm libgbm xorg-x11-xauth xorg-x11-fonts-* mesa-libGL
+          
       - uses: actions/checkout@v4
       
       - name: Set up Node.js
@@ -25,7 +36,7 @@ jobs:
         run: |
           npm ci
           npx playwright install --with-deps
-          
+
       - name: Clean old reports
         run: |
           rm -rf test-results/custom-report/
