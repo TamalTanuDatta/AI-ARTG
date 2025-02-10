@@ -14,32 +14,25 @@ jobs:
     name: Run Playwright Tests
     runs-on: ubuntu-latest
     container:
-      image: amazonlinux:2
+      image: public.ecr.aws/amazonlinux/amazonlinux:2023
     steps:
       - name: Install system dependencies
         run: |
-          yum update -y
-          yum install -y nodejs npm git
-          
+          dnf update -y
+          dnf install -y nodejs nodejs-devel npm git
+          dnf groupinstall -y "Development Tools"
+          dnf install -y xorg-x11-server-Xvfb libX11 libXcomposite libXcursor libXdamage libXext \
+            libXi libXtst cups-libs libXrandr libXScrnSaver libXinerama \
+            libxkbcommon dbus-libs atk at-spi2-atk gtk3 alsa-lib pango \
+            mesa-libgbm
+            
       - uses: actions/checkout@v4
       
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'npm'
-          
       - name: Install project dependencies
         run: |
           # Install project dependencies
           npm install
           
-          # Install system dependencies for Playwright
-          yum install -y xvfb libX11 libXcomposite libXcursor libXdamage libXext \
-            libXi libXtst cups-libs libXrandr libXScrnSaver libXinerama \
-            libxkbcommon dbus-libs atk at-spi2-atk gtk3 alsa-lib pango \
-            liberation-fonts
-            
           # Install Playwright with Chromium
           npx playwright install chromium --with-deps
           
