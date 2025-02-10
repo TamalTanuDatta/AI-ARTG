@@ -19,6 +19,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
+      - name: Debug Environment
+        run: |
+          pwd
+          ls -la
+          node --version
+          npm --version
+          
       - name: Install dependencies
         run: |
           npm ci
@@ -31,18 +38,27 @@ jobs:
       - name: Run Playwright tests
         env:
           PLAYWRIGHT_HEADLESS: true
-        run: npx playwright test HomepageTest.spec.ts RegistrationPageTest.spec.ts
+          DEBUG: pw:api
+        run: |
+          ls -la static/
+          npx playwright test HomepageTest.spec.ts RegistrationPageTest.spec.ts --debug
         
       - name: List test results
         if: always()
-        run: ls -la test-results/custom-report/
+        run: |
+          ls -la
+          ls -la test-results/ || true
+          ls -la test-results/custom-report/ || true
+          cat playwright-report/results.json || true
         
       - name: Upload test results
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: test-report
-          path: test-results/custom-report/
+          path: |
+            test-results/custom-report/
+            playwright-report/
         
   deploy:
     needs: test
