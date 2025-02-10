@@ -14,60 +14,14 @@ jobs:
     name: Run Playwright Tests
     runs-on: ubuntu-latest
     container:
-      image: amazonlinux:2023
+      image: mcr.microsoft.com/playwright:v1.41.2-jammy
       
     steps:
-      - name: Install system dependencies
-        run: |
-          dnf update -y
-          dnf groupinstall -y "Development Tools"
-          dnf install -y nodejs nodejs-devel npm git
-          
-          # Install browser dependencies
-          dnf install -y \
-            alsa-lib \
-            atk \
-            cups-libs \
-            gtk3 \
-            ipa-gothic-fonts \
-            libXcomposite \
-            libXcursor \
-            libXdamage \
-            libXext \
-            libXi \
-            libXrandr \
-            libXScrnSaver \
-            libXtst \
-            mesa-libgbm \
-            pango \
-            xorg-x11-fonts-100dpi \
-            xorg-x11-fonts-75dpi \
-            xorg-x11-fonts-cyrillic \
-            xorg-x11-fonts-misc \
-            xorg-x11-fonts-Type1 \
-            xorg-x11-utils \
-            nss \
-            libdrm \
-            libgbm \
-            xorg-x11-server-Xvfb \
-            dbus-glib \
-            libXinerama \
-            libxkbcommon \
-            libwayland-client \
-            libwayland-cursor \
-            libxkbcommon-x11 \
-            xorg-x11-xauth
-          
       - uses: actions/checkout@v4
       
       - name: Install dependencies
         run: |
           npm ci
-          PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1 npm install playwright
-          
-      - name: Install browsers manually
-        run: |
-          npx playwright install chromium firefox webkit --with-deps
           
       - name: Clean old reports
         run: |
