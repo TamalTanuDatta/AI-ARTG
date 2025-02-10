@@ -22,21 +22,53 @@ jobs:
           dnf update -y
           dnf groupinstall -y "Development Tools"
           dnf install -y nodejs nodejs-devel npm git
+          
           # Install browser dependencies
-          dnf install -y xorg-x11-server-Xvfb gtk3 alsa-lib libdrm libgbm xorg-x11-xauth xorg-x11-fonts-* mesa-libGL
+          dnf install -y \
+            alsa-lib \
+            atk \
+            cups-libs \
+            gtk3 \
+            ipa-gothic-fonts \
+            libXcomposite \
+            libXcursor \
+            libXdamage \
+            libXext \
+            libXi \
+            libXrandr \
+            libXScrnSaver \
+            libXtst \
+            mesa-libgbm \
+            pango \
+            xorg-x11-fonts-100dpi \
+            xorg-x11-fonts-75dpi \
+            xorg-x11-fonts-cyrillic \
+            xorg-x11-fonts-misc \
+            xorg-x11-fonts-Type1 \
+            xorg-x11-utils \
+            nss \
+            libdrm \
+            libgbm \
+            xorg-x11-server-Xvfb \
+            dbus-glib \
+            libXinerama \
+            libxkbcommon \
+            libwayland-client \
+            libwayland-cursor \
+            libxkbcommon-x11 \
+            xorg-x11-xauth
           
       - uses: actions/checkout@v4
       
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          
       - name: Install dependencies
         run: |
           npm ci
-          npx playwright install --with-deps
-
+          PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1 npm install playwright
+          
+      - name: Install browsers manually
+        run: |
+          npx playwright install chromium firefox webkit --with-deps
+          
       - name: Clean old reports
         run: |
           rm -rf test-results/custom-report/
