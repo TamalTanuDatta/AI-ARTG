@@ -14,27 +14,12 @@ jobs:
     name: Run Playwright Tests
     runs-on: ubuntu-latest
     container:
-      image: public.ecr.aws/amazonlinux/amazonlinux:2023
+      image: mcr.microsoft.com/playwright:v1.41.2-jammy
     steps:
-      - name: Install system dependencies
-        run: |
-          dnf update -y
-          dnf install -y nodejs nodejs-devel npm git
-          dnf groupinstall -y "Development Tools"
-          dnf install -y xorg-x11-server-Xvfb libX11 libXcomposite libXcursor libXdamage libXext \
-            libXi libXtst cups-libs libXrandr libXScrnSaver libXinerama \
-            libxkbcommon dbus-libs atk at-spi2-atk gtk3 alsa-lib pango \
-            mesa-libgbm
-            
       - uses: actions/checkout@v4
       
-      - name: Install project dependencies
-        run: |
-          # Install project dependencies
-          npm install
-          
-          # Install Playwright with Chromium
-          npx playwright install chromium --with-deps
+      - name: Install dependencies
+        run: npm install
           
       - name: Move tests to regression folder
         run: |
@@ -45,12 +30,8 @@ jobs:
       - name: Run Playwright tests
         env:
           PLAYWRIGHT_HEADLESS: true
-          DISPLAY: ':99'
           DEBUG: pw:api
         run: |
-          # Start Xvfb
-          Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
-          
           echo "Running tests with custom reporter..."
           npx playwright test \
             tests/regression/homepage.spec.ts \
