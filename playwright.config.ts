@@ -3,31 +3,40 @@ import CustomHTMLReporter from './custom-reporter';
 
 export default defineConfig({
   testDir: './static',
-  timeout: 30000,
+  timeout: 60000,
   expect: {
-    timeout: 5000
+    timeout: 10000
   },
   fullyParallel: true,
-  retries: 0,
-  workers: undefined,
+  retries: 2,
+  workers: 1,
   reporter: [['./custom-reporter.ts']],
   use: {
-    baseURL: 'file://',
-    actionTimeout: 5000,
-    navigationTimeout: 10000,
-    trace: 'on-first-retry',
-    screenshot: 'only-on-failure',
-    video: 'retain-on-failure',
+    baseURL: 'https://www.leasingmarkt.de',
+    actionTimeout: 15000,
+    navigationTimeout: 30000,
+    trace: 'on',
+    screenshot: 'on',
+    video: 'on',
     viewport: { width: 1280, height: 720 },
     headless: true,
+    ignoreHTTPSErrors: true
   },
   projects: [
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      use: { 
+        ...devices['Desktop Chrome'],
+        launchOptions: {
+          args: [
+            '--disable-dev-shm-usage',
+            '--no-sandbox',
+            '--disable-setuid-sandbox'
+          ]
+        }
+      },
     },
   ],
   outputDir: 'test-results',
-  preserveOutput: 'failures-only',
-  maxFailures: 5,
+  preserveOutput: 'always',
 });

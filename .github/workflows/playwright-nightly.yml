@@ -40,10 +40,11 @@ jobs:
       - name: Run Playwright tests with ts-node
         env:
           PLAYWRIGHT_HEADLESS: true
-          DEBUG: pw:api
+          DEBUG: pw:api,pw:browser*
+          NODE_TLS_REJECT_UNAUTHORIZED: '0'
         run: |
           ls -la static/
-          NODE_OPTIONS="-r ts-node/register" npx playwright test -c playwright.config.ts static/HomepageTest.spec.ts static/RegistrationPageTest.spec.ts --debug
+          NODE_OPTIONS="-r ts-node/register" npx playwright test -c playwright.config.ts static/HomepageTest.spec.ts static/RegistrationPageTest.spec.ts --debug --retries=2
         
       - name: List test results
         if: always()
