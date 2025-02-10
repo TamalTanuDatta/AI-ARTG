@@ -1,3 +1,6 @@
 test-results/
 __pycache__/
 *.pyc
+# Test artifacts
+*.spec.ts
+!tests/regression/*.spec.ts
