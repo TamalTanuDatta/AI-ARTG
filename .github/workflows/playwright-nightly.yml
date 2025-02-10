@@ -29,24 +29,21 @@ jobs:
       - name: Install dependencies
         run: |
           npm ci
-          npm install --save-dev typescript @types/node @playwright/test ts-node
+          npm install --save-dev typescript @types/node @playwright/test ts-node tsconfig-paths
           
-      - name: Build TypeScript
+      - name: Clean build artifacts
         run: |
-          npx tsc --project tsconfig.json
-          
-      - name: Clean old reports
-        run: |
+          rm -f static/*.js
           rm -rf test-results/custom-report/
           rm -rf playwright-report/
           
-      - name: Run Playwright tests
+      - name: Run Playwright tests with ts-node
         env:
           PLAYWRIGHT_HEADLESS: true
           DEBUG: pw:api
         run: |
           ls -la static/
-          npx playwright test static/HomepageTest.spec.ts static/RegistrationPageTest.spec.ts --debug
+          NODE_OPTIONS="-r ts-node/register" npx playwright test -c playwright.config.ts static/HomepageTest.spec.ts static/RegistrationPageTest.spec.ts --debug
         
       - name: List test results
         if: always()
