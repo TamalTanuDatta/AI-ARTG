@@ -33,8 +33,7 @@ jobs:
           
       - name: Build TypeScript
         run: |
-          tsc -v
-          tsc --noEmit
+          npx tsc --project tsconfig.json
           
       - name: Clean old reports
         run: |
