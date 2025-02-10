@@ -29,6 +29,7 @@ jobs:
       - name: Install dependencies
         run: |
           npm ci
+          npx playwright install chromium
           npm install --save-dev typescript @types/node @playwright/test ts-node tsconfig-paths
           
       - name: Clean build artifacts
@@ -44,7 +45,7 @@ jobs:
           NODE_TLS_REJECT_UNAUTHORIZED: '0'
         run: |
           ls -la static/
-          NODE_OPTIONS="-r ts-node/register" npx playwright test -c playwright.config.ts static/HomepageTest.spec.ts static/RegistrationPageTest.spec.ts --debug --retries=2
+          PWDEBUG=1 NODE_OPTIONS="-r ts-node/register" npx playwright test -c playwright.config.ts static/HomepageTest.spec.ts static/RegistrationPageTest.spec.ts --debug --retries=2 --workers=1
         
       - name: List test results
         if: always()

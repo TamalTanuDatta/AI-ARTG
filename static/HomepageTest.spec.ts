@@ -19,13 +19,10 @@ test.beforeEach(async ({ context, page }) => {
       get: function() { return ""; },
       set: function() { return true; }
     });
-    window.localStorage.clear();
-    window.sessionStorage.clear();
   });
 
-  // Navigate to page
-  await page.goto("https://www.leasingmarkt.de/");
-  await page.waitForLoadState("networkidle");
+  // Navigate to base URL
+  await page.goto('https://www.leasingmarkt.de/', { waitUntil: 'networkidle' });
 });
 
 test.describe("Homepage - LeasingMarkt.de Page Test", () => {
