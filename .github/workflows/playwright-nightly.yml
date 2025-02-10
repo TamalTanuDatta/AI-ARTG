@@ -19,29 +19,22 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
-      - name: Debug Environment
-        run: |
-          pwd
-          ls -la
-          node --version
-          npm --version
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
           
       - name: Install dependencies
-        run: |
-          npm install
-          npx playwright install chromium --with-deps
+        run: npm install
           
       - name: Clean build artifacts
         run: |
-          rm -f static/*.js
-          rm -rf test-results/custom-report/
+          rm -rf test-results/
           rm -rf playwright-report/
           
       - name: Clean test files
-        run: rm -f tests/**/test_*.spec.ts
-          
-      - name: Fix file permissions
-        run: sudo chown -R 1001:118 static/
+        run: rm -f static/test_*.spec.ts
           
       - name: Run Playwright tests
         env:
@@ -55,14 +48,6 @@ jobs:
             --repeat-each=2 \
             --retries=3
         
-      - name: List test results
-        if: always()
-        run: |
-          ls -la
-          ls -la test-results/ || true
-          ls -la test-results/custom-report/ || true
-          cat playwright-report/results.json || true
-        
       - name: Print test errors
         if: always()
         run: |
@@ -75,10 +60,11 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: test-report
+          name: playwright-results
           path: |
-            test-results/custom-report/
+            test-results/
             playwright-report/
+          retention-days: 30
         
   deploy:
     needs: test
@@ -94,7 +80,7 @@ jobs:
       - name: Download test results
         uses: actions/download-artifact@v4
         with:
-          name: test-report
+          name: playwright-results
           
       - name: List files
         run: ls -la
