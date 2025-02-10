@@ -77,15 +77,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
-      - name: Send Slack notification
-        if: always()
-        uses: slackapi/slack-github-action@v1.25.0
-        with:
-          payload: |
-            {
-              "text": "🤖 *Autonomous Test Report*\n\n*Status*: ${{ job.status }}\n*Workflow*: ${{ github.workflow }}\n*Run*: <${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|#${{ github.run_number }}>\n*Pages URL*: ${{ steps.deployment.outputs.page_url }}"
-            }
-        env:
-          SLACK_WEBHOOK_URL: "https://hooks.slack.com/triggers/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"
-          SLACK_WEBHOOK_TYPE: "INCOMING_WEBHOOK"
