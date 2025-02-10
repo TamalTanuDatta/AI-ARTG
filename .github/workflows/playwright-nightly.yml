@@ -21,12 +21,6 @@ jobs:
       - name: Install dependencies
         run: npm install
           
-      - name: Move tests to regression folder
-        run: |
-          mkdir -p tests/regression
-          mv static/HomepageTest.spec.ts tests/regression/homepage.spec.ts
-          mv static/RegistrationPageTest.spec.ts tests/regression/registration.spec.ts
-          
       - name: Run Playwright tests
         env:
           PLAYWRIGHT_HEADLESS: true
@@ -34,8 +28,8 @@ jobs:
         run: |
           echo "Running tests with custom reporter..."
           npx playwright test \
-            tests/regression/homepage.spec.ts \
-            tests/regression/registration.spec.ts \
+            tests/regression/HomepageTest.spec.ts \
+            tests/regression/RegistrationPageTest.spec.ts \
             --config=playwright.config.ts \
             --workers=1 \
             --retries=2 \
