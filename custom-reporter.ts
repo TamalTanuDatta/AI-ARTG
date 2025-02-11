@@ -20,8 +20,10 @@ class CustomHTMLReporter implements Reporter {
   private reportPath: string = '';
   private testResults: EnhancedTestResult[] = [];
   private testGroups: Map<string, EnhancedTestResult[]> = new Map();
+  private startTime: number = Date.now();
 
   async onBegin(config: FullConfig) {
+    this.startTime = Date.now();
     this.reportPath = path.join(process.cwd(), 'test-results/custom-report');
     if (!fs.existsSync(this.reportPath)) {
       fs.mkdirSync(this.reportPath, { recursive: true });
@@ -99,36 +101,23 @@ class CustomHTMLReporter implements Reporter {
               <div class="grid grid-cols-1 gap-4">
                 ${subTests.map(test => `
                   <div class="test-card bg-gray-800 rounded-lg p-6 hover:bg-gray-700 transition-all duration-200">
-                    <div class="flex items-center justify-between mb-4">
-                      <h4 class="test-name text-lg font-semibold text-white">${test.name.split(' › ').pop()}</h4>
-                      <span class="px-3 py-1 rounded-full text-white text-sm font-medium ${
-                        test.status === 'passed' ? 'bg-green-600' : 'bg-red-600'
+                    <div class="flex justify-between items-start mb-4">
+                      <h4 class="text-lg font-medium text-white test-name">${test.name.split(' › ').pop()}</h4>
+                      <span class="px-3 py-1 rounded-full text-sm font-medium ${
+                        test.status === 'passed' ? 'bg-green-500/20 text-green-400' :
+                        test.status === 'failed' ? 'bg-red-500/20 text-red-400' :
+                        'bg-yellow-500/20 text-yellow-400'
                       }">${test.status}</span>
                     </div>
-                    <div class="text-gray-300 space-y-2">
+                    <div class="flex space-x-6 text-sm text-gray-400">
                       <p>Duration: ${(test.duration / 1000).toFixed(2)}s</p>
                       <p>Assertions: ${test.assertions}</p>
-                      ${test.error ? `
-                        <div class="mt-4 p-4 bg-red-900/50 rounded-lg">
-                          <p class="text-red-400 font-mono text-sm">${test.error}</p>
-                        </div>
-                      ` : ''}
-                      ${test.steps?.length ? `
-                        <div class="mt-4 space-y-2">
-                          <p class="text-gray-400 font-semibold">Test Steps:</p>
-                          <ul class="space-y-1 text-sm text-gray-400">
-                            ${test.steps.map(step => `
-                              <li class="flex items-center">
-                                <span class="w-4 h-4 mr-2 ${
-                                  step.error ? 'text-red-400' : 'text-green-400'
-                                }">•</span>
-                                ${step.title}
-                              </li>
-                            `).join('')}
-                          </ul>
-                        </div>
-                      ` : ''}
                     </div>
+                    ${test.error ? `
+                      <div class="mt-4 p-4 bg-red-500/10 rounded-lg">
+                        <pre class="text-red-400 text-sm overflow-x-auto">${test.error}</pre>
+                      </div>
+                    ` : ''}
                   </div>
                 `).join('')}
               </div>
@@ -140,64 +129,31 @@ class CustomHTMLReporter implements Reporter {
   }
 
   async onEnd() {
+    const totalDuration = Date.now() - this.startTime;
     const stats = {
       total: this.testResults.length,
-      passed: this.testResults.filter(r => r.status === 'passed').length,
-      failed: this.testResults.filter(r => r.status === 'failed').length,
-      duration: this.testResults.reduce((acc, curr) => acc + curr.duration, 0)
+      passed: this.testResults.filter(t => t.status === 'passed').length,
+      failed: this.testResults.filter(t => t.status === 'failed').length,
+      duration: totalDuration
     };
 
-    const htmlContent = `
-    <!DOCTYPE html>
+    const htmlContent = `<!DOCTYPE html>
     <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Nightly Automated Playwright Tests Result</title>
-        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <title>Playwright Test Report</title>
+        <script src="https://cdn.tailwindcss.com"></script>
         <style>
-            body {
-                background-color: #111827;
-            }
-            .test-card {
-                transition: all 0.2s ease-in-out;
-            }
-            .test-card:hover {
-                transform: translateY(-2px);
-            }
-            .animate-fade-in {
-                animation: fadeIn 0.5s ease-in;
-            }
-            @keyframes fadeIn {
-                from { opacity: 0; transform: translateY(10px); }
-                to { opacity: 1; transform: translateY(0); }
-            }
-            .stats-card {
-                background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
-            }
-            .custom-scrollbar {
-                scrollbar-width: thin;
-                scrollbar-color: #4B5563 #1F2937;
-            }
-            .custom-scrollbar::-webkit-scrollbar {
-                width: 8px;
-            }
-            .custom-scrollbar::-webkit-scrollbar-track {
-                background: #1F2937;
-            }
-            .custom-scrollbar::-webkit-scrollbar-thumb {
-                background-color: #4B5563;
-                border-radius: 4px;
-            }
+            body { background-color: #111827; }
+            .stats-card { background-color: #1F2937; }
+            .test-card:hover { transform: translateY(-2px); }
         </style>
     </head>
-    <body class="min-h-screen text-gray-100 custom-scrollbar">
-        <div class="container mx-auto px-4 py-8">
-            <header class="text-center mb-12">
-                <h1 class="text-4xl font-bold text-white mb-2">Nightly Automated Playwright Tests Result</h1>
-                <p class="text-gray-500">Generated on ${new Date().toLocaleString()}</p>
-            </header>
-
+    <body class="min-h-screen p-8">
+        <div class="max-w-7xl mx-auto">
+            <h1 class="text-4xl font-bold text-white mb-8">Playwright Test Report</h1>
+            
             <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
                 <div class="stats-card rounded-lg p-6 text-white">
                     <h3 class="text-xl font-semibold mb-2">Total Tests</h3>

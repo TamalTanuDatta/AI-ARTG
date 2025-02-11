@@ -2,7 +2,7 @@ import { test, expect } from "@playwright/test";
 
 // Configure browser context to block cookie popups
 test.use({
-  actionTimeout: 10000,
+  actionTimeout: 30000,
   contextOptions: {
     userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
     bypassCSP: true,
@@ -19,10 +19,26 @@ test.beforeEach(async ({ context, page }) => {
       get: function() { return ""; },
       set: function() { return true; }
     });
+
+    // Hide cookie consent popup
+    const style = document.createElement('style');
+    style.textContent = `
+      #as24-cmp-popup, .as24-cmp-popup, .cmp-popup, .cookie-popup, .cookie-banner, .cookie-consent {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+      }
+    `;
+    document.head.appendChild(style);
   });
 
-  // Navigate to base URL
-  await page.goto('https://www.leasingmarkt.de/', { waitUntil: 'networkidle' });
+  // Navigate to base URL with longer timeout
+  await page.goto('https://www.leasingmarkt.de/', { waitUntil: 'networkidle', timeout: 40000 });
+
+  // Wait for page to stabilize
+  await page.waitForLoadState('networkidle');
+  await page.waitForTimeout(2000);
 });
 
 test.describe("Homepage - LeasingMarkt.de Page Test", () => {

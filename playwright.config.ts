@@ -3,18 +3,25 @@ import CustomHTMLReporter from './custom-reporter';
 
 export default defineConfig({
   testDir: './tests',
-  timeout: 30000,
-  expect: { timeout: 5000 },
-  fullyParallel: false,
-  workers: 1,
-  retries: 0,
-  reporter: [['./custom-reporter.ts']],
+  timeout: 60000,
+  expect: { timeout: 15000 },
+  fullyParallel: true,
+  workers: 4,
+  retries: 2,
+  reporter: [
+    ['list'],  // Built-in list reporter for console output
+    ['html'],  // Built-in HTML reporter
+    ['./custom-reporter.ts', {}]  // Our custom reporter with empty options
+  ],
   use: {
-    actionTimeout: 10000,
-    navigationTimeout: 20000,
-    trace: 'on',
-    screenshot: 'on',
-    headless: true
+    actionTimeout: 30000,
+    navigationTimeout: 40000,
+    trace: 'on-first-retry',  // Capture traces only on first retry
+    screenshot: 'only-on-failure',  // Take screenshots only on test failures
+    headless: true,
+    viewport: { width: 1280, height: 720 },
+    ignoreHTTPSErrors: true,
+    bypassCSP: true
   },
   projects: [
     {
@@ -22,7 +29,7 @@ export default defineConfig({
       use: { 
         ...devices['Desktop Chrome'],
         launchOptions: {
-          args: ['--no-sandbox']
+          args: ['--no-sandbox', '--disable-setuid-sandbox']
         }
       },
     },

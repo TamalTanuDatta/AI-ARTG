@@ -12,28 +12,67 @@ permissions:
 jobs:
   test:
     name: Run Playwright Tests
-    runs-on: ubuntu-latest
-    container:
-      image: mcr.microsoft.com/playwright:v1.41.2-jammy
+    runs-on: al2023    # Amazon Linux 2023
     steps:
       - uses: actions/checkout@v4
       
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          
+      - name: Install system dependencies
+        run: |
+          # Install development tools and Playwright dependencies
+          sudo dnf groupinstall -y "Development Tools"
+          sudo dnf install -y \
+            xorg-x11-server-Xvfb \
+            libX11 \
+            libXcomposite \
+            libXcursor \
+            libXdamage \
+            libXext \
+            libXi \
+            libXtst \
+            cups-libs \
+            libXrandr \
+            libXScrnSaver \
+            libXinerama \
+            libxkbcommon \
+            dbus-libs \
+            atk \
+            at-spi2-atk \
+            gtk3 \
+            alsa-lib \
+            pango \
+            mesa-libgbm \
+            nss \
+            nspr \
+            wayland-devel
+            
       - name: Install dependencies
-        run: npm install
+        run: |
+          npm install
+          PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1 npm install playwright
+          npx playwright install chromium
           
       - name: Run Playwright tests
         env:
           PLAYWRIGHT_HEADLESS: true
-          DEBUG: pw:api
+          DEBUG: pw:api,pw:browser*
+          DISPLAY: ':99'
         run: |
-          echo "Running tests with custom reporter..."
+          # Start Xvfb
+          sudo Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
+          
+          echo "Running tests with configured reporters..."
           npx playwright test \
             tests/regression/HomepageTest.spec.ts \
             tests/regression/RegistrationPageTest.spec.ts \
             --config=playwright.config.ts \
-            --workers=1 \
-            --retries=2 \
-            --reporter=./custom-reporter.ts
+            --workers=4 \
+            --retries=2
         
       - name: Upload test results
         if: always()
@@ -43,6 +82,7 @@ jobs:
           path: |
             test-results/
             playwright-report/
+            test-results/custom-report/
           retention-days: 30
           
   deploy:
@@ -50,7 +90,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
+    runs-on: al2023
     steps:
       - name: Download test results
         uses: actions/download-artifact@v4
@@ -63,7 +103,9 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
+          path: |
+            playwright-report/
+            test-results/custom-report/
           
       - name: Deploy to GitHub Pages
         id: deployment
