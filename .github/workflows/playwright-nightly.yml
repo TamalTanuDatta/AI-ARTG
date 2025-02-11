@@ -13,6 +13,8 @@ jobs:
   test:
     name: Run Playwright Tests
     runs-on: ubuntu-latest
+    container:
+      image: mcr.microsoft.com/playwright:v1.42.1-jammy
     steps:
       - uses: actions/checkout@v4
       
@@ -22,30 +24,16 @@ jobs:
           node-version: '18'
           cache: 'npm'
           
-      - name: Install audio package
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y libasound2t64
-          
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-          
       - name: Install dependencies
+        env:
+          PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
         run: npm ci
-          
-      - name: Install Playwright Browsers
-        run: npx playwright install chromium --with-deps
           
       - name: Run Playwright tests
         env:
           PLAYWRIGHT_HEADLESS: true
           DEBUG: pw:api,pw:browser*
-          DISPLAY: ':99'
         run: |
-          # Start Xvfb
-          sudo Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
-          
           echo "Running tests with custom reporter..."
           npx playwright test \
             tests/regression/HomepageTest.spec.ts \
