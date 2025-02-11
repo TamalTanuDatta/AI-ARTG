@@ -14,7 +14,7 @@ jobs:
     name: Run Playwright Tests
     runs-on: ubuntu-latest
     container:
-      image: mcr.microsoft.com/playwright:v1.42.1-jammy
+      image: mcr.microsoft.com/playwright:v1.41.2-jammy
     steps:
       - uses: actions/checkout@v4
       
@@ -27,7 +27,9 @@ jobs:
       - name: Install dependencies
         env:
           PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
-        run: npm ci
+        run: |
+          npm install
+          npm install -D @playwright/test@1.41.2 playwright@1.41.2
           
       - name: Run Playwright tests
         env:
