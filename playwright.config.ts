@@ -1,6 +1,9 @@
 import { defineConfig, devices } from '@playwright/test';
 import CustomHTMLReporter from './custom-reporter';
 
+// Check if running in GitHub Actions nightly build
+const isNightlyBuild = process.env.GITHUB_WORKFLOW === 'Playwright Tests Nightly';
+
 export default defineConfig({
   testDir: './tests',
   timeout: 60000,
@@ -8,11 +11,13 @@ export default defineConfig({
   fullyParallel: true,
   workers: 4,
   retries: 2,
-  reporter: [
-    ['list'],  // Built-in list reporter for console output
-    ['html'],  // Built-in HTML reporter
-    ['./custom-reporter.ts', {}]  // Our custom reporter with empty options
-  ],
+  reporter: isNightlyBuild ? 
+    [['./custom-reporter.ts', {}]] :  // Only custom reporter for nightly builds
+    [
+      ['list'],  // Built-in list reporter for console output
+      ['html'],  // Built-in HTML reporter
+      ['./custom-reporter.ts', {}]  // Our custom reporter
+    ],
   use: {
     actionTimeout: 30000,
     navigationTimeout: 40000,
